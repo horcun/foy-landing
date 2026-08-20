@@ -138,6 +138,12 @@ const STIL = {
   DEGER_YUZDE: 15,
   ADIM: 16,          // kullanım adımı
   UYARI: 17,         // dürüstlük notu — bordo
+  // Tablo üstündeki tek satırlık not. ACIKLAMA'dan tek farkı: KAYDIRMA YOK.
+  // ACIKLAMA (wrapText) sabit 18pt satırda kullanılınca metin iki-üç satıra
+  // bölünüyor, satır yüksekliği yetmiyor ve program notu ORTASINDAN KIRPIP
+  // gösteriyordu (sahada görüldü). Tek satır, yanındaki boş hücrelerin
+  // üzerinden akar — elektronik tabloda notun olağan davranışı budur.
+  NOT: 18,
 };
 
 const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -179,7 +185,7 @@ const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
   </border>
 </borders>
 <cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
-<cellXfs count="18">
+<cellXfs count="19">
   <xf numFmtId="0"   fontId="0" fillId="0" borderId="0" xfId="0"/>
   <xf numFmtId="0"   fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/>
   <xf numFmtId="0"   fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
@@ -198,6 +204,7 @@ const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
   <xf numFmtId="165" fontId="6" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyFont="1"/>
   <xf numFmtId="0"   fontId="7" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>
   <xf numFmtId="0"   fontId="8" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>
+  <xf numFmtId="0"   fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment vertical="center"/></xf>
 </cellXfs>
 <cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>
 </styleSheet>`;
@@ -231,8 +238,8 @@ function portfoySayfasi() {
   ], ' ht="26" customHeight="1"'));
 
   satirlar.push(satirXml(2, [
-    hucre(1, 2, { tip: 'metin', stil: STIL.ACIKLAMA,
-      deger: 'Krem renkli hücreleri siz doldurun; beyaz hücreleri Excel hesaplar. Güncel fiyatlar elle girilir — şablon dışarıdan veri çekmez.' }),
+    hucre(1, 2, { tip: 'metin', stil: STIL.NOT,
+      deger: 'Krem hücreleri siz doldurun, beyaz hücreleri Excel hesaplar. Güncel fiyatlar elle girilir — şablon dışarıdan veri çekmez.' }),
   ], ' ht="18" customHeight="1"'));
 
   const basliklar = ['Varlık', 'Kod', 'Tür', 'Adet', 'Ort. Alış', 'Maliyet', 'Güncel Fiyat', 'Güncel Değer', 'K/Z', 'K/Z %', 'Ağırlık'];
@@ -313,7 +320,7 @@ function ozetSayfasi() {
   const P = `'Portföy'`;
 
   r.push(satirXml(1, [hucre(1, 1, { tip: 'metin', deger: 'Portföy Özeti', stil: STIL.BASLIK_BUYUK })], ' ht="26" customHeight="1"'));
-  r.push(satirXml(2, [hucre(1, 2, { tip: 'metin', stil: STIL.ACIKLAMA, deger: 'Bu sayfadaki her sayı Portföy sayfasından otomatik gelir. Buraya elle bir şey yazmanız gerekmez.' })], ' ht="18" customHeight="1"'));
+  r.push(satirXml(2, [hucre(1, 2, { tip: 'metin', stil: STIL.NOT, deger: 'Bu sayfadaki her sayı Portföy sayfasından gelir; buraya elle bir şey yazmanız gerekmez.' })], ' ht="18" customHeight="1"'));
 
   r.push(satirXml(4, [hucre(1, 4, { tip: 'metin', deger: 'GENEL DURUM', stil: STIL.BOLUM })]));
   const genel = [
@@ -403,7 +410,7 @@ function kullanimSayfasi() {
   yaz(24, '•  Fiyatları elle güncellemeyi unuttuğunuzda tablo eski değeri göstermeye devam eder.');
 
   yaz(26, 'DAHA PRATİK BİR YOL', STIL.BOLUM);
-  yaz(27, 'FÖY; fiyatları kendisi günceller, her alım-satımı ve temettüyü kalıcı olarak kaydeder, ortalama maliyeti sizin girdiğiniz gerçek alış fiyatından hesaplar. Hesap açmanız gerekmez, veriler cihazınızda kalır.', STIL.ADIM, '34');
+  yaz(27, 'FÖY; fiyatları kendisi günceller, girdiğiniz her alım-satımı ve temettüyü kalıcı olarak saklar, ortalama maliyeti sizin girdiğiniz gerçek alış fiyatından hesaplar. Hesap açmanız gerekmez, veriler cihazınızda kalır.', STIL.ADIM, '34');
   yaz(28, 'appfoy.com', STIL.BOLUM);
 
   yaz(30, 'FÖY bir portföy takip aracıdır; yatırım danışmanlığı değildir. Bu dosyadaki örnek sayılar gerçek bir portföyü temsil etmez.', STIL.ACIKLAMA, '28');
