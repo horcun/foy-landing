@@ -1,0 +1,3 @@
+# Excel sablonu ikili dosyadir. core.autocrlf=true altinda satir sonu
+# donusumune ugrarsa ZIP arsivi BOZULUR ve dosya acilmaz. Acikca isaretle.
+*.xlsx binary
