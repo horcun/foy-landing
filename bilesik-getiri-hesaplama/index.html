@@ -130,8 +130,7 @@
 
   /* ── ARAÇ ŞERİDİ (her sayfada aynı) ──────────────────────── */
   .tools{border-bottom:1px solid var(--line);background:var(--navy-850)}
-  .tools-in{display:flex;gap:10px;padding:12px 0;overflow-x:auto;scrollbar-width:none}
-  .tools-in::-webkit-scrollbar{display:none}
+  .tools-in{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:12px 0}
   .tool{display:inline-flex;align-items:center;gap:10px;flex:none;padding:10px 16px;border-radius:12px;background:var(--navy-800);border:1px solid var(--line);color:var(--muted);font-size:14.5px;font-weight:500;white-space:nowrap;transition:border-color .16s,color .16s,transform .16s}
   .tool svg{width:19px;height:19px;flex:none;fill:currentColor}
   .tool:hover{border-color:var(--gold-dim);color:var(--cream);transform:translateY(-1px)}
