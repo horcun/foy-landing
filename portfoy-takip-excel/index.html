@@ -194,6 +194,19 @@
     .dl .btn{width:100%}
     section{padding:38px 0}
   }
+
+  /* ── ARAÇ ŞERİDİ — üç ücretsiz araca her sayfadan tek dokunuş ─────────
+     Sticky nav'a eklenmedi: ana sayfadaki nav zaten dolu ve 880px altında
+     .nav-links gizleniyor. Ayrı şerit mobilde de görünür kalıyor ve dar
+     ekranda yatay kaydırılıyor. */
+  .tools{border-bottom:1px solid var(--line);background:var(--navy-850)}
+  .tools-in{display:flex;gap:10px;padding:12px 0;overflow-x:auto;scrollbar-width:none}
+  .tools-in::-webkit-scrollbar{display:none}
+  .tool{display:inline-flex;align-items:center;gap:10px;flex:none;padding:10px 16px;border-radius:12px;background:var(--navy-800);border:1px solid var(--line);color:var(--muted);font-size:14.5px;font-weight:500;white-space:nowrap;transition:border-color .16s,color .16s,transform .16s}
+  .tool svg{width:19px;height:19px;flex:none;fill:currentColor}
+  .tool:hover{border-color:var(--gold-dim);color:var(--cream);transform:translateY(-1px)}
+  .tool:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tool[aria-current="page"]{color:var(--gold);border-color:var(--line-strong);background:rgba(201,166,90,.09)}
 </style>
 </head>
 <body>
@@ -204,6 +217,23 @@
     <a class="nav-back" href="/">← FÖY ana sayfa</a>
   </div>
 </nav>
+
+<div class="tools">
+  <div class="wrap tools-in">
+    <a class="tool" href="/portfoy-takip-excel" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>
+      Portföy Takip Excel
+    </a>
+    <a class="tool" href="/finansal-ozgurluk-hesaplama">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>
+      Özgürlük Hesaplayıcı
+    </a>
+    <a class="tool" href="/bilesik-getiri-hesaplama">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>
+      Bileşik Getiri
+    </a>
+  </div>
+</div>
 
 <header class="hero">
   <div class="wrap">
@@ -350,6 +380,8 @@
   <div class="wrap">
     <div class="foot-links">
       <a href="/">Ana sayfa</a>
+      <a href="/finansal-ozgurluk-hesaplama">Finansal Özgürlük Hesaplama</a>
+      <a href="/bilesik-getiri-hesaplama">Bileşik Getiri Hesaplama</a>
       <a href="/gizlilik.html">Gizlilik Politikası</a>
       <a href="/kosullar.html">Kullanım Koşulları (EULA)</a>
       <a href="mailto:destek@appfoy.com">Destek</a>

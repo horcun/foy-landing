@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bileşik Getiri Hesaplama — Katkı Artışı ve Enflasyon Dahil | FÖY</title>
+<meta name="description" content="Bileşik getiri hesaplama aracı: başlangıç, aylık katkı, yıllık katkı artışı ve enflasyon dahil. Yıl yıl tablo, bugünün parasıyla sonuç. Kayıt yok, ücretsiz." />
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+<link rel="canonical" href="https://appfoy.com/bilesik-getiri-hesaplama" />
+<meta property="og:title" content="Bileşik Getiri Hesaplama — Katkı Artışı ve Enflasyon Dahil" />
+<meta property="og:description" content="Aylık katkın her yıl artıyorsa ve enflasyon varsa gerçek sonuç ne? Yıl yıl gör. Kayıt istemez." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://appfoy.com/bilesik-getiri-hesaplama" />
+<meta property="og:image" content="https://appfoy.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:site_name" content="FÖY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bileşik Getiri Hesaplama — Katkı Artışı ve Enflasyon Dahil" />
+<meta name="twitter:description" content="Yıllık katkı artışı ve enflasyon düzeltmesi olan bileşik getiri hesaplayıcısı." />
+<meta name="twitter:image" content="https://appfoy.com/og.png" />
+<meta name="theme-color" content="#090F1E" />
+<link rel="icon" href="/assets/favicon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://appfoy.com/bilesik-getiri-hesaplama#app",
+      "name": "Bileşik Getiri Hesaplama Aracı",
+      "url": "https://appfoy.com/bilesik-getiri-hesaplama",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "tr",
+      "description": "Başlangıç anaparası, aylık katkı, yıllık katkı artışı, getiri beklentisi ve enflasyonu birlikte hesaba katan bileşik getiri hesaplayıcısı. Yıl yıl tablo ve bugünün parasıyla sonuç verir. Kayıt gerektirmez.",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://appfoy.com/#publisher",
+      "name": "FÖY",
+      "url": "https://appfoy.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "FÖY", "item": "https://appfoy.com" },
+        { "@type": "ListItem", "position": 2, "name": "Bileşik Getiri Hesaplama", "item": "https://appfoy.com/bilesik-getiri-hesaplama" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://appfoy.com/bilesik-getiri-hesaplama#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Bileşik getiri nedir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Getirinin yalnızca anaparaya değil, önceki yıllarda kazanılan getirinin üzerine de eklenmesidir. Basit getiride her yıl aynı tutar kazanılır; bileşik getiride kazanç da kazanmaya başlar. Fark ilk yıllarda küçük, uzun vadede belirleyicidir." }
+        },
+        {
+          "@type": "Question",
+          "name": "Bileşik getiri nasıl hesaplanır?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Her yıl portföy beklenen getiri oranıyla çarpılır, sonra o yılın katkısı eklenir: portföy = portföy × (1 + getiri) + yıllık katkı. Bu araç ayrıca katkının her yıl belirlediğin oranda artmasını ve sonucun enflasyonla bugünün parasına indirilmesini de hesaba katar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Aylık katkımın her yıl artmasını neden hesaba katmak gerekir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Çünkü gelir sabit kalmıyor. 20 yıl boyunca aynı tutarı biriktirdiğini varsayan bir hesap, enflasyonun olduğu bir ülkede gerçeği ciddi biçimde eksik gösterir. Katkı artışını yüzde olarak girdiğinde araç her yıl katkıyı o oranda büyütür." }
+        },
+        {
+          "@type": "Question",
+          "name": "Nominal sonuç ile bugünün parasıyla sonuç arasındaki fark nedir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nominal sonuç, o yıldaki rakamdır. Bugünün parasıyla sonuç ise o rakamın bugünkü alım gücüdür: nominal ÷ (1 + enflasyon)^yıl. Yüksek enflasyon ortamında ikisi arasındaki fark çok büyük olabilir; kararı nominal rakama göre vermek yanıltıcıdır." }
+        },
+        {
+          "@type": "Question",
+          "name": "Girdiğim sayılar kaydediliyor mu?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Hesaplama tamamen tarayıcında çalışır; girdiğin hiçbir sayı sunucuya gönderilmez veya kaydedilmez. Kayıt ya da e-posta istemiyoruz." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --navy-900:#090F1E;--navy-850:#0D1426;--navy-800:#121B31;--navy-700:#1A2442;
+    --line:rgba(201,166,90,.16);--line-strong:rgba(201,166,90,.32);
+    --bordo:#B5374F;--bordo-bright:#D24C66;--gold:#C9A65A;--gold-dim:rgba(201,166,90,.6);
+    --cream:#F2EFE9;--muted:#9098AE;--up:#45C58E;--down:#E06A7E;--lime:#A8D800;
+    --display:'Spectral',Georgia,serif;--body:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--navy-900);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--bordo);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold-dim)}
+  h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:.005em;line-height:1.2}
+  h1{font-size:clamp(32px,5.4vw,50px);margin:14px 0 18px;text-wrap:balance}
+  h2{font-size:clamp(25px,3.6vw,34px);margin-bottom:14px;text-wrap:balance}
+  h3{font-weight:600;font-size:19px;margin-bottom:6px}
+  p{color:var(--cream)}
+  .lead{color:var(--muted);font-size:clamp(16px,1.7vw,19px);max-width:60ch}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15px;padding:14px 22px;border-radius:13px;cursor:pointer;border:1px solid transparent;transition:transform .18s,background .18s,border-color .18s}
+  .btn-primary{background:var(--bordo);color:#fff}
+  .btn-primary:hover{background:var(--bordo-bright);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;border-color:var(--line-strong);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(9,15,30,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav-in .brand img{width:34px;height:34px;border-radius:9px}
+  .nav-back{font-size:14.5px;color:var(--muted)}
+  .nav-back:hover{color:var(--gold)}
+
+  /* ── ARAÇ ŞERİDİ (her sayfada aynı) ──────────────────────── */
+  .tools{border-bottom:1px solid var(--line);background:var(--navy-850)}
+  .tools-in{display:flex;gap:10px;padding:12px 0;overflow-x:auto;scrollbar-width:none}
+  .tools-in::-webkit-scrollbar{display:none}
+  .tool{display:inline-flex;align-items:center;gap:10px;flex:none;padding:10px 16px;border-radius:12px;background:var(--navy-800);border:1px solid var(--line);color:var(--muted);font-size:14.5px;font-weight:500;white-space:nowrap;transition:border-color .16s,color .16s,transform .16s}
+  .tool svg{width:19px;height:19px;flex:none;fill:currentColor}
+  .tool:hover{border-color:var(--gold-dim);color:var(--cream);transform:translateY(-1px)}
+  .tool:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tool[aria-current="page"]{color:var(--gold);border-color:var(--line-strong);background:rgba(201,166,90,.09)}
+
+  header.hero{padding:56px 0 8px}
+  section{padding:48px 0;border-top:1px solid var(--line)}
+
+  .calc{margin:30px 0 8px;border-radius:20px;background:var(--navy-850);border:1px solid var(--line-strong);overflow:hidden}
+  .calc-in{padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+  .fld label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+  .fld .ip{display:flex;align-items:center;background:var(--navy-900);border:1px solid var(--line);border-radius:12px;transition:border-color .16s}
+  .fld .ip:focus-within{border-color:var(--gold-dim)}
+  .fld input{flex:1;min-width:0;background:none;border:none;color:var(--cream);font-family:var(--mono);font-size:17px;padding:13px 12px;width:100%}
+  .fld input:focus{outline:none}
+  .fld .unit{font-family:var(--mono);font-size:14px;color:var(--muted);padding:0 14px 0 4px;flex:none}
+  .fld .hint{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .fld.star label{color:var(--lime)}
+  .fld.star .ip{border-color:rgba(168,216,0,.28)}
+
+  .out{border-top:1px solid var(--line-strong);background:var(--navy-800);padding:24px}
+  .out-lab{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .out-val{font-family:var(--display);font-size:clamp(30px,6vw,46px);font-weight:600;line-height:1.05;color:var(--gold);font-variant-numeric:tabular-nums}
+  .out-sub{font-size:14px;color:var(--muted);margin-top:6px}
+
+  .split{height:12px;border-radius:99px;overflow:hidden;display:flex;margin:22px 0 8px;border:1px solid var(--line)}
+  .split i{display:block;height:100%;transition:width .35s ease}
+  .split .ana{background:var(--lime)}
+  .split .kaz{background:var(--gold)}
+  .split-key{display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .split-key b{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px}
+
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:14px;margin-top:22px}
+  .stat{padding:16px 18px;border-radius:14px;background:var(--navy-850);border:1px solid var(--line)}
+  .stat .sl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .stat .sv{font-family:var(--mono);font-size:18px;color:var(--cream);font-variant-numeric:tabular-nums}
+  .stat.gain .sv{color:var(--gold)}
+  .stat.real{border-color:rgba(224,106,126,.3);background:rgba(224,106,126,.07)}
+  .stat.real .sv{color:var(--down)}
+
+  .out-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);line-height:1.55}
+  .out-note b{color:var(--gold);font-weight:600}
+
+  .honest{margin-top:22px;padding:18px 20px;border-radius:14px;background:rgba(181,55,79,.08);border:1px solid rgba(181,55,79,.28)}
+  .honest p{font-size:15px}
+  .honest b{color:var(--gold)}
+  .honest code{font-family:var(--mono);font-size:14px;color:var(--gold)}
+
+  ol.steps{margin:20px 0 0;padding:0;list-style:none;counter-reset:s}
+  ol.steps li{counter-increment:s;position:relative;padding:0 0 16px 46px;color:var(--muted);font-size:15.5px}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:-1px;width:30px;height:30px;border-radius:9px;background:var(--navy-700);border:1px solid var(--line-strong);color:var(--gold);font-family:var(--mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+  ol.steps li b{color:var(--cream);font-weight:600}
+  ol.steps li code{font-family:var(--mono);font-size:13.5px;color:var(--gold)}
+
+  .tblwrap{overflow-x:auto;margin-top:20px;border-radius:14px;border:1px solid var(--line);max-height:420px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{padding:10px 14px;text-align:right;border-bottom:1px solid rgba(201,166,90,.1);white-space:nowrap;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  th{position:sticky;top:0;background:var(--navy-800);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;font-family:var(--body)}
+  th:first-child,td:first-child{text-align:left}
+  td{color:var(--muted)}
+  td.tot{color:var(--cream)}
+  td.g{color:var(--gold)}
+  tr:last-child td{border-bottom:0}
+  .tbl-cap{font-size:13px;color:var(--muted);margin-top:10px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+  .card{padding:20px;border-radius:15px;background:var(--navy-850);border:1px solid var(--line)}
+  .card p{font-size:14.5px;color:var(--muted);line-height:1.55}
+  .card.mine{border-color:var(--line-strong);background:var(--navy-800)}
+  .card.mine h3{color:var(--gold)}
+
+  .cta{margin-top:24px;padding:26px;border-radius:18px;background:var(--navy-800);border:1px solid var(--line-strong)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+
+  .faq{margin-top:18px}
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  details summary{cursor:pointer;font-weight:600;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;min-height:44px}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";color:var(--gold);font-family:var(--mono);font-size:20px;flex:none}
+  details[open] summary::after{content:"−"}
+  details p{margin-top:10px;color:var(--muted);font-size:15px}
+
+  footer{padding:38px 0 46px;border-top:1px solid var(--line)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:var(--muted);margin-bottom:18px}
+  .foot-links a:hover{color:var(--gold)}
+  .disclaimer{font-size:12.5px;color:var(--muted);line-height:1.55;opacity:.8}
+
+  @media(max-width:560px){
+    body{font-size:16px}
+    .calc-in,.out{padding:18px}
+    section{padding:38px 0}
+    .cta .btn{width:100%}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="FÖY" /></a>
+    <a class="nav-back" href="/">← FÖY ana sayfa</a>
+  </div>
+</nav>
+
+<div class="tools">
+  <div class="wrap tools-in">
+    <a class="tool" href="/portfoy-takip-excel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>
+      Portföy Takip Excel
+    </a>
+    <a class="tool" href="/finansal-ozgurluk-hesaplama">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>
+      Özgürlük Hesaplayıcı
+    </a>
+    <a class="tool" href="/bilesik-getiri-hesaplama" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>
+      Bileşik Getiri
+    </a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Ücretsiz hesaplayıcı</span>
+    <h1>Bileşik Getiri Hesaplama</h1>
+    <p class="lead">Çoğu hesaplayıcı iki şeyi atlıyor: katkının her yıl artması ve enflasyon. İkisi de Türkiye'de sonucu belirleyen şeyler. Bu araç ikisini de hesaba katıyor — ve sana yıl yıl gösteriyor.</p>
+
+    <div class="calc">
+      <div class="calc-in">
+        <div class="fld">
+          <label for="baslangic">Başlangıç anaparan</label>
+          <div class="ip"><input id="baslangic" type="text" inputmode="numeric" value="100.000" /><span class="unit">TL</span></div>
+          <p class="hint">Bugün elindeki tutar.</p>
+        </div>
+        <div class="fld">
+          <label for="aylik">Aylık katkın</label>
+          <div class="ip"><input id="aylik" type="text" inputmode="numeric" value="15.000" /><span class="unit">TL</span></div>
+          <p class="hint">İlk yıl her ay ekleyeceğin tutar.</p>
+        </div>
+        <div class="fld">
+          <label for="getiri">Yıllık getiri beklentin</label>
+          <div class="ip"><input id="getiri" type="text" inputmode="decimal" value="12" /><span class="unit">%</span></div>
+          <p class="hint">Senin varsayımın — biz rakam önermiyoruz.</p>
+        </div>
+        <div class="fld">
+          <label for="sure">Süre</label>
+          <div class="ip"><input id="sure" type="text" inputmode="numeric" value="20" /><span class="unit">yıl</span></div>
+          <p class="hint">En fazla 100 yıl.</p>
+        </div>
+        <div class="fld star">
+          <label for="artis">Yıllık katkı artışı</label>
+          <div class="ip"><input id="artis" type="text" inputmode="decimal" value="25" /><span class="unit">%</span></div>
+          <p class="hint">Katkın her yıl bu oranda büyür. <b>Diğer hesaplayıcılarda yok.</b></p>
+        </div>
+        <div class="fld star">
+          <label for="enflasyon">Yıllık enflasyon beklentin</label>
+          <div class="ip"><input id="enflasyon" type="text" inputmode="decimal" value="" placeholder="boş bırakabilirsin" /><span class="unit">%</span></div>
+          <p class="hint">Doldurursan sonucu <b>bugünün parasıyla</b> da gösterir.</p>
+        </div>
+      </div>
+
+      <div class="out" id="out" aria-live="polite">
+        <div class="out-lab" id="son-lab">20 yıl sonunda portföyün</div>
+        <div class="out-val" id="son">—</div>
+        <div class="out-sub" id="son-alt">Beklenen getiri ve katkı artışı senin girdiğin varsayımlar.</div>
+
+        <div class="split" role="img" aria-labelledby="split-key">
+          <i class="ana" id="bar-ana" style="width:60%"></i><i class="kaz" id="bar-kaz" style="width:40%"></i>
+        </div>
+        <div class="split-key" id="split-key">
+          <span><b style="background:var(--lime)"></b><span id="k-ana">Yatırdığın: —</span></span>
+          <span><b style="background:var(--gold)"></b><span id="k-kaz">Bileşik getiri: —</span></span>
+        </div>
+
+        <div class="grid3">
+          <div class="stat"><div class="sl">Toplam yatırdığın</div><div class="sv" id="anapara">—</div></div>
+          <div class="stat gain"><div class="sl">Getirinin payı</div><div class="sv" id="kazanc-pay">—</div></div>
+          <div class="stat" id="son-katki-box"><div class="sl">Son yılın aylık katkısı</div><div class="sv" id="son-katki">—</div></div>
+          <div class="stat real" id="real-box" hidden><div class="sl">Bugünün parasıyla</div><div class="sv" id="reel">—</div></div>
+        </div>
+
+        <p class="out-note" id="not">Bu sonuç <b>senin varsayımlarının</b> matematiksel çıktısıdır — tahmin ya da vaat değil. Getiri oranını bir puan değiştirip ne kadar oynadığına bak; bileşik hesapta küçük farklar uzun vadede büyük ayrışır.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Yıl yıl ne oluyor</h2>
+    <p class="lead">Bileşik getirinin sıkıcı tarafı şu: ilk yıllar hiçbir şey olmuyor gibi görünür. Tablodaki "getirinin payı" kolonunu aşağı doğru izle — asıl hikâye orada.</p>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>Yıl</th><th>O yılın katkısı</th><th>Toplam yatırdığın</th><th>Bileşik getiri</th><th>Portföy</th><th>Getiri payı</th></tr></thead>
+        <tbody id="tablo"></tbody>
+      </table>
+    </div>
+    <p class="tbl-cap">Katkı yıl sonunda eklenir; yani eklendiği yılın getirisini kazanmaz. FÖY uygulamasının Projeksiyon ekranı da aynı sırayı kullanır.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Hesap tam olarak nasıl yapılıyor</h2>
+    <ol class="steps">
+      <li><b>Yıl başında ek varsa eklenir</b>, sonra portföy büyütülür: <code>portföy = portföy × (1 + getiri)</code></li>
+      <li><b>O yılın katkısı eklenir:</b> <code>+ (aylık katkı × 12)</code> — yıl sonunda, yani o yılın getirisini kazanmaz.</li>
+      <li><b>Katkı bir sonraki yıl için büyütülür:</b> <code>aylık katkı = aylık katkı × (1 + artış)</code></li>
+      <li><b>Bu döngü süre boyunca tekrarlanır.</b> Bileşik getiri = portföy − toplam yatırdığın.</li>
+      <li><b>Enflasyon girildiyse</b> sonuç bugünün parasına indirilir: <code>nominal ÷ (1 + enflasyon)^yıl</code></li>
+    </ol>
+
+    <div class="honest">
+      <p><b>Neden yıllık bileşik, aylık değil?</b> Çünkü FÖY uygulamasının Projeksiyon ekranı da yıllık bileşikleme yapıyor ve iki yerin aynı sayıyı vermesi gerekiyor. Aylık bileşikleme biraz daha yüksek sonuç verir; fark, getiri beklentisindeki yarım puanlık bir değişimden küçüktür. <b>Kesinlik iddiası olan bir araç değil bu</b> — büyüklük sırasını ve katkı/getiri dengesini görmen için var.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Diğer hesaplayıcılardan farkı</h2>
+    <p class="lead">Türkçe bileşik faiz hesaplayıcılarının çoğu tek bir soruyu cevaplıyor: "anapara şu oranda şu kadar yıl büyürse ne olur?" Gerçek hayat böyle işlemiyor.</p>
+
+    <div class="cards">
+      <div class="card mine">
+        <h3>Katkın her yıl artıyor</h3>
+        <p>Gelirin artıyorsa birikimin de artıyor. 20 yıl boyunca aynı tutarı biriktirdiğini varsayan bir hesap, enflasyonun olduğu bir ülkede sonucu ciddi biçimde eksik gösterir. <b>İncelediğimiz Türkçe hesaplayıcıların hiçbirinde bu alan yoktu.</b></p>
+      </div>
+      <div class="card mine">
+        <h3>Enflasyon sonuca giriyor</h3>
+        <p>20 yıl sonraki nominal rakam kulağa büyük gelir; alım gücü bambaşka bir sayıdır. Bu araç ikisini birlikte gösteriyor. <b>Bu da rakiplerde ya yok ya sadece SSS'de anlatılıyor.</b></p>
+      </div>
+      <div class="card">
+        <h3>Duvar yok</h3>
+        <p>Kayıt yok, e-posta yok, "devamı için üye ol" yok. Girdiğin sayılar tarayıcından çıkmıyor, hiçbir yere kaydedilmiyor.</p>
+      </div>
+      <div class="card">
+        <h3>Getiri mi, faiz mi</h3>
+        <p>"Bileşik faiz" mevduatın dilidir: oran baştan bilinir. "Bileşik getiri" yatırımın dilidir: oran bir <b>beklenti</b>dir ve tutmayabilir. Bu araç ikincisi için yazıldı.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Peki bu sayı ne zaman yeter?</h2>
+    <p class="lead">Bileşik getiri sana "ne kadar olur" diyor ama "yeter mi" demiyor. O sorunun cevabı giderine bağlı: yıllık giderinin 25 katına ulaştığında çalışmak zorunda değilsin.</p>
+    <p style="margin-top:14px;color:var(--muted);font-size:15.5px">Hedefini ve hangi yıl ulaşacağını görmek için: <a href="/finansal-ozgurluk-hesaplama" style="color:var(--gold);text-decoration:underline">Finansal Özgürlük Hesaplama aracı</a>.</p>
+
+    <div class="cta">
+      <h3>FÖY bu hesabı gerçek portföyünle yapar</h3>
+      <p style="color:var(--muted);font-size:15px;margin-top:8px">Bu sayfada varsayım giriyorsun. Uygulamada hisse, fon, altın, döviz, kripto ve nakit varlıklarını ekliyorsun; güncel fiyatlar otomatik geliyor, projeksiyon gerçek portföyünün üstünden çalışıyor. Verilerin yalnızca cihazında kalıyor.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6760929887">App Store'dan indir</a>
+        <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.denizorcun.foy">Google Play'den indir</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sık sorulanlar</h2>
+    <div class="faq">
+      <details open><summary>Bileşik getiri nedir?</summary><p>Getirinin yalnızca anaparaya değil, önceki yıllarda kazanılan getirinin üzerine de eklenmesidir. Basit getiride her yıl aynı tutar kazanırsın; bileşik getiride kazanç da kazanmaya başlar. Fark ilk yıllarda küçük, uzun vadede belirleyicidir — yukarıdaki tabloda "getiri payı" kolonunun nasıl büyüdüğüne bak.</p></details>
+      <details><summary>Bileşik getiri nasıl hesaplanır?</summary><p>Her yıl portföy beklenen getiri oranıyla çarpılır, sonra o yılın katkısı eklenir: <code style="font-family:var(--mono);color:var(--gold)">portföy = portföy × (1 + getiri) + yıllık katkı</code>. Bu araç ayrıca katkının her yıl belirlediğin oranda artmasını ve sonucun enflasyonla bugünün parasına indirilmesini de hesaba katar.</p></details>
+      <details><summary>Katkımın her yıl artmasını neden hesaba katmak gerekir?</summary><p>Çünkü gelir sabit kalmıyor. 20 yıl boyunca aynı tutarı biriktirdiğini varsayan bir hesap, enflasyonun olduğu bir ülkede gerçeği eksik gösterir. Katkı artışını sıfır yapıp bir de öyle dene — aradaki farkı gör.</p></details>
+      <details><summary>Nominal ile bugünün parası arasındaki fark nedir?</summary><p>Nominal sonuç, o yıldaki rakamdır. Bugünün parasıyla sonuç ise o rakamın bugünkü alım gücü: <code style="font-family:var(--mono);color:var(--gold)">nominal ÷ (1 + enflasyon)^yıl</code>. Yüksek enflasyon ortamında ikisi arasındaki fark çok büyük olur; kararı nominal rakama göre vermek yanıltıcıdır.</p></details>
+      <details><summary>Girdiğim sayılar kaydediliyor mu?</summary><p>Hayır. Hesap tamamen tarayıcında çalışıyor; girdiğin hiçbir sayı sunucuya gitmiyor, kaydedilmiyor. Sayfayı kapattığında kayboluyor.</p></details>
+      <details><summary>Bu bir yatırım tavsiyesi mi?</summary><p>Değil. FÖY yatırım danışmanlığı hizmeti sunmaz ve 6362 sayılı Sermaye Piyasası Kanunu kapsamında yetkili bir kuruluş değildir. Buradaki hesap senin girdiğin varsayımların matematiksel sonucudur; getiri vaadi ya da tavsiye içermez.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="/">Ana sayfa</a>
+      <a href="/portfoy-takip-excel">Portföy Takip Excel</a>
+      <a href="/finansal-ozgurluk-hesaplama">Finansal Özgürlük Hesaplama</a>
+      <a href="/gizlilik.html">Gizlilik Politikası</a>
+      <a href="/kosullar.html">Kullanım Koşulları (EULA)</a>
+      <a href="mailto:destek@appfoy.com">Destek</a>
+    </div>
+    <p class="disclaimer">FÖY (Finansal Özgürlük Yolculuğu) bir kişisel portföy ve finansal özgürlük takip uygulamasıdır. Yatırım danışmanlığı hizmeti sunmaz; bu sayfadaki hiçbir hesaplama, örnek sayı veya açıklama alım-satım tavsiyesi, garanti ya da getiri vaadi niteliği taşımaz. Getiri, katkı artışı ve enflasyon oranları kullanıcının kendi varsayımlarıdır; geçmiş getiriler gelecek için garanti oluşturmaz. Yatırım kararlarının sorumluluğu tamamen kullanıcıya aittir. © 2026 FÖY.</p>
+  </div>
+</footer>
+
+<script>
+var nf0 = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 });
+var nf1 = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+function oku(s){
+  if (s == null) return 0;
+  var t = String(s).trim().replace(/\s/g,'').replace(/\./g,'').replace(',', '.');
+  var n = parseFloat(t);
+  return isFinite(n) && n > 0 ? n : 0;
+}
+function tl(v){ return nf0.format(Math.round(v)) + ' TL'; }
+// Büyük sayılar tabloda okunmaz hale geliyor; kısaltma uygulamadaki
+// fmtCompact ile aynı eşikleri kullanıyor.
+function kisa(v){
+  var a = Math.abs(v);
+  if (a >= 1e9) return nf1.format(v/1e9) + ' mlr';
+  if (a >= 1e6) return nf1.format(v/1e6) + ' mn';
+  if (a >= 1e3) return nf0.format(v/1e3) + ' b';
+  return nf0.format(v);
+}
+
+// ── SİMÜLASYON ─────────────────────────────────────────────────────────────
+// App.js → CompoundCalculator.simulate() ile BİREBİR aynı döngü:
+//   pv = pv * (1 + rate) + aylık×12        ← katkı YIL SONUNDA
+//   aylıkKatkı *= (1 + artış)              ← her yıl büyür
+//   getiri = max(pv - toplamKatkı, 0)
+// Uygulamayla ayrışırsa kullanıcı sayfada bir sayı, uygulamada başkasını görür.
+function simule(baslangic, aylik, oran, yil, artis){
+  var pv = baslangic, toplam = baslangic, aylikKatki = aylik;
+  var satirlar = [];
+  for (var y = 1; y <= yil; y++) {
+    var yillikKatki = aylikKatki * 12;
+    pv = pv * (1 + oran) + yillikKatki;
+    toplam += yillikKatki;
+    satirlar.push({
+      yil: y,
+      oYilKatki: yillikKatki,
+      aylikKatki: aylikKatki,
+      toplamKatki: toplam,
+      getiri: Math.max(pv - toplam, 0),
+      portfoy: pv
+    });
+    aylikKatki = aylikKatki * (1 + artis);
+  }
+  return satirlar;
+}
+
+function hesapla(){
+  var baslangic = oku(document.getElementById('baslangic').value);
+  var aylik     = oku(document.getElementById('aylik').value);
+  var oran      = oku(document.getElementById('getiri').value) / 100;
+  var yil       = Math.min(Math.max(Math.round(oku(document.getElementById('sure').value)), 0), 100);
+  var artis     = oku(document.getElementById('artis').value) / 100;
+  var enf       = oku(document.getElementById('enflasyon').value) / 100;
+
+  document.getElementById('son-lab').textContent =
+    yil > 0 ? yil + ' yıl sonunda portföyün' : 'Süre gir';
+
+  var satirlar = simule(baslangic, aylik, oran, yil, artis);
+  var son = satirlar[satirlar.length - 1];
+
+  if (!son || (baslangic <= 0 && aylik <= 0)) {
+    document.getElementById('son').textContent = '—';
+    document.getElementById('anapara').textContent = '—';
+    document.getElementById('kazanc-pay').textContent = '—';
+    document.getElementById('son-katki').textContent = '—';
+    document.getElementById('k-ana').textContent = 'Yatırdığın: —';
+    document.getElementById('k-kaz').textContent = 'Bileşik getiri: —';
+    document.getElementById('bar-ana').style.width = '50%';
+    document.getElementById('bar-kaz').style.width = '50%';
+    document.getElementById('real-box').hidden = true;
+    document.getElementById('tablo').innerHTML =
+      '<tr><td colspan="6" style="text-align:center;padding:22px">Başlangıç anaparası veya aylık katkı gir.</td></tr>';
+    return;
+  }
+
+  document.getElementById('son').textContent = tl(son.portfoy);
+  document.getElementById('anapara').textContent = tl(son.toplamKatki);
+
+  var pay = son.portfoy > 0 ? (son.getiri / son.portfoy) * 100 : 0;
+  document.getElementById('kazanc-pay').textContent = '%' + nf1.format(pay);
+  document.getElementById('son-katki').textContent = tl(son.aylikKatki) + '/ay';
+  document.getElementById('son-katki-box').hidden = false;
+
+  var anaPct = son.portfoy > 0 ? (son.toplamKatki / son.portfoy) * 100 : 100;
+  document.getElementById('bar-ana').style.width = Math.max(Math.min(anaPct, 100), 0) + '%';
+  document.getElementById('bar-kaz').style.width = Math.max(Math.min(100 - anaPct, 100), 0) + '%';
+  document.getElementById('k-ana').textContent = 'Yatırdığın: ' + tl(son.toplamKatki);
+  document.getElementById('k-kaz').textContent = 'Bileşik getiri: ' + tl(son.getiri);
+
+  // Bugünün parasıyla — uygulamadaki realTotal ile aynı: nominal ÷ (1+enf)^yıl
+  var rbox = document.getElementById('real-box');
+  if (enf > 0 && yil > 0) {
+    document.getElementById('reel').textContent = tl(son.portfoy / Math.pow(1 + enf, yil));
+    rbox.hidden = false;
+  } else {
+    rbox.hidden = true;
+  }
+
+  var h = '';
+  for (var i = 0; i < satirlar.length; i++) {
+    var s = satirlar[i];
+    var p = s.portfoy > 0 ? (s.getiri / s.portfoy) * 100 : 0;
+    h += '<tr><td>' + s.yil + '</td><td>' + kisa(s.oYilKatki) + '</td><td>' + kisa(s.toplamKatki) +
+         '</td><td class="g">' + kisa(s.getiri) + '</td><td class="tot">' + kisa(s.portfoy) +
+         '</td><td>%' + nf1.format(p) + '</td></tr>';
+  }
+  document.getElementById('tablo').innerHTML = h;
+}
+
+var alanlar = ['baslangic','aylik','getiri','sure','artis','enflasyon'];
+for (var i = 0; i < alanlar.length; i++) {
+  document.getElementById(alanlar[i]).addEventListener('input', hesapla);
+}
+hesapla();
+</script>
+
+</body>
+</html>
