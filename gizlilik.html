@@ -39,28 +39,51 @@
 </div></nav>
 <main class="legal"><div class="wrap">
   <h1>Gizlilik Politikası</h1>
-  <div class="updated">Son Güncelleme: Mayıs 2026</div>
+  <div class="updated">Son Güncelleme: 10 Eylül 2026</div>
   <h2>1. Genel Bakış</h2>
-  <p>FÖY — Finansal Özgürlük Yolculuğu uygulaması, "Privacy by Design" ilkesiyle geliştirilmiştir. Kullanıcı mahremiyeti en yüksek önceliktir.</p>
+  <p>FÖY — Finansal Özgürlük Yolculuğu uygulaması, "Privacy by Design" ilkesiyle geliştirilmiştir. Kullanıcı mahremiyeti en yüksek önceliktir. Bu politika, uygulamanın <strong>fiilen ne topladığını ve neyi toplamadığını</strong> eksiksiz açıklar.</p>
 
-  <h2>2. Toplanan Veriler</h2>
-  <p>Uygulama tarafından <strong>toplanmayan</strong> veriler:</p>
+  <h2>2. Toplanmayan Veriler</h2>
+  <p>Uygulama tarafından <strong>hiçbir koşulda toplanmayan</strong> veriler:</p>
   <ul>
     <li>Ad, soyad, TC Kimlik No</li>
     <li>E-posta adresi veya telefon numarası</li>
     <li>Banka hesabı veya kredi kartı bilgisi</li>
-    <li>Konum bilgisi, rehber veya kamera erişimi</li>
+    <li>Konum (GPS) bilgisi, rehber veya kamera erişimi</li>
+    <li><strong>Portföyünüzün içeriği:</strong> hangi varlıklara sahip olduğunuz, miktarları, maliyetleri, toplam değeriniz, kâr/zararınız, gelir ve gider kayıtlarınız</li>
   </ul>
-  <p>Portföy verileri yalnızca kullanıcının kendi cihazında saklanır. İsteğe bağlı olarak Apple iCloud'da yedeklenebilir. Geliştirici dahil hiçbir üçüncü tarafın bu verilere erişimi teknik olarak imkansızdır.</p>
+  <p>Uygulamanın hesap sistemi yoktur; kayıt olmaz, giriş yapmazsınız. Portföy verileri yalnızca kendi cihazınızda (yerel depolama) saklanır ve isteğe bağlı olarak kendi Apple iCloud hesabınızda yedeklenebilir. <strong>Bu finansal verilere geliştirici dahil hiç kimse erişemez</strong> — cihazınızdan hiçbir sunucuya gönderilmez. Uygulamayı silmeniz ve iCloud yedeğinizin olmaması durumunda veriler kalıcı olarak yok olur.</p>
 
-  <h2>3. Üçüncü Taraf Entegrasyonları</h2>
-  <p>Fiyat verileri anonim sorgularla şu servislerden çekilir: CoinGecko API, Yahoo Finance, GitHub Gist. Hiçbir kişisel veri paylaşılmaz.</p>
+  <h2>3. Toplanan Teknik Veriler</h2>
+  <p>Uygulamanın çalışmasını sürdürmek ve iyileştirmek için aşağıdaki <strong>kimliksiz</strong> teknik veriler toplanır. Bu verilerin hiçbiri sizi kişi olarak tanımlamaz ve <strong>hiçbiri portföyünüzün içeriğini içermez</strong>.</p>
+  <ul>
+    <li><strong>Hata ve performans kayıtları — Sentry (sunucular Almanya'da).</strong> Uygulama çöktüğünde veya yavaşladığında hata izi, cihaz modeli, işletim sistemi sürümü ve uygulama sürümü kaydedilir. Amaç yalnızca hatayı bulup düzeltmektir.</li>
+    <li><strong>Ürün kullanım olayları — PostHog (sunucular Avrupa Birliği'nde).</strong> Uygulamanın hangi noktalarında zorlandığınızı anlamak için sayılı ve adı belli olaylar kaydedilir: uygulamanın kurulması, açılıp kapanması, tanıtım akışının tamamlanması, ilk varlığın eklenmesi, varlık ekleme ekranından çıkılması ve abonelik satın alınması. Bu olaylara <strong>yalnızca üç bilgi</strong> eşlik eder: platform (iOS/Android), uygulama sürümü ve bölge. Bölge <strong>cihazınızın dil/bölge ayarından</strong> okunur; IP adresi çözümlemesi sunucu tarafında <strong>kapatılmıştır</strong>. Cihaz kimliği uygulamanın ürettiği rastgele bir dizedir, kişisel bilgilerinizle ilişkilendirilmez. Ekran görüntüsü veya oturum kaydı (session replay) alınmaz; dokunuşların otomatik kaydı kapalıdır.</li>
+    <li><strong>Abonelik durumu — RevenueCat.</strong> Aboneliğinizin aktif olup olmadığını doğrulamak için kullanılır ve kimliksiz (anonim) bir uygulama kullanıcı numarası ile çalışır. Ödeme bilgileriniz bu servise de, uygulamaya da ulaşmaz.</li>
+  </ul>
+  <p>Bu üç servis, verileri kendi gizlilik politikaları kapsamında işler. Toplanan teknik veriler reklam amacıyla kullanılmaz, satılmaz ve üçüncü taraflarla paylaşılmaz.</p>
 
-  <h2>4. Ödeme ve Abonelik</h2>
-  <p>Abonelik ve ödeme işlemleri tamamen Apple App Store altyapısı üzerinden yürütülür. Finansal bilgileriniz uygulama tarafından görülmez veya saklanmaz.</p>
+  <h2>4. Fiyat Veri Kaynakları</h2>
+  <p>Fiyat verileri, <strong>kimliksiz sorgularla</strong> aşağıdaki servislerden çekilir. Bu sorgularda hiçbir kişisel veriniz ve portföy bilginiz yer almaz; yalnızca hangi varlığın fiyatının istendiği belirtilir:</p>
+  <ul>
+    <li><strong>Yahoo Finance</strong> — hisse senedi, döviz, emtia ve vadeli fiyatları</li>
+    <li><strong>Binance</strong> — kripto para fiyatları</li>
+    <li><strong>api.gold-api.com</strong> — değerli metal spot fiyatları</li>
+    <li><strong>GitHub</strong> — yatırım fonu listeleri ve geçmiş fon fiyatları</li>
+  </ul>
+  <p>Bu isteklerde, her internet bağlantısında olduğu gibi temel ağ tanımlayıcıları (ör. IP adresi) ilgili servisin kendi gizlilik politikasına tabidir.</p>
 
-  <h2>5. İletişim</h2>
-  <p><a href="mailto:destek@appfoy.com">destek@appfoy.com</a></p>
+  <h2>5. Ödeme ve Abonelik</h2>
+  <p>Abonelik ve ödeme işlemleri tamamen <strong>Apple App Store</strong> veya <strong>Google Play</strong> altyapısı üzerinden yürütülür. Kart ve ödeme bilgileriniz uygulama tarafından görülmez, işlenmez veya saklanmaz.</p>
+
+  <h2>6. Çocukların Gizliliği</h2>
+  <p>FÖY 18 yaşından küçük kullanıcılar için tasarlanmamıştır.</p>
+
+  <h2>7. Değişiklikler</h2>
+  <p>Bu politika, uygulamanın davranışı değiştiğinde güncellenir. Güncelleme tarihi sayfanın başında yer alır.</p>
+
+  <h2>8. İletişim</h2>
+  <p>Gizlilik politikasına ilişkin sorularınız için: <a href="mailto:destek@appfoy.com">destek@appfoy.com</a></p>
 </div></main>
 <footer><div class="wrap">
   <div class="foot-links">
