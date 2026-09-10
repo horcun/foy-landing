@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finansal Özgürlük Hesaplama — Ne Kadar Para Lazım? | FÖY</title>
+<meta name="description" content="Finansal özgürlük hesaplama aracı: yıllık giderini gir, hedefini ve özgürlük yılını gör. %4 kuralıyla hesaplar, enflasyon düzeltmesi yapar. Kayıt yok, e-posta yok." />
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+<link rel="canonical" href="https://appfoy.com/finansal-ozgurluk-hesaplama" />
+<meta property="og:title" content="Finansal Özgürlük Hesaplama — Ne Kadar Para Lazım?" />
+<meta property="og:description" content="Yıllık giderini gir; hedefini, tamamlanma oranını ve özgürlük yılını gör. Enflasyon düzeltmeli. Kayıt istemez." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://appfoy.com/finansal-ozgurluk-hesaplama" />
+<meta property="og:image" content="https://appfoy.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:site_name" content="FÖY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Finansal Özgürlük Hesaplama — Ne Kadar Para Lazım?" />
+<meta name="twitter:description" content="Yıllık giderini gir; hedefini ve özgürlük yılını gör. Kayıt istemez." />
+<meta name="twitter:image" content="https://appfoy.com/og.png" />
+<meta name="theme-color" content="#090F1E" />
+<link rel="icon" href="/assets/favicon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://appfoy.com/finansal-ozgurluk-hesaplama#app",
+      "name": "Finansal Özgürlük Hesaplama Aracı",
+      "url": "https://appfoy.com/finansal-ozgurluk-hesaplama",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "tr",
+      "description": "Yıllık giderden %4 kuralıyla finansal özgürlük hedefini, tamamlanma oranını ve tahmini özgürlük yılını hesaplayan ücretsiz araç. Kayıt gerektirmez, veri sunucuya gönderilmez.",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://appfoy.com/#publisher",
+      "name": "FÖY",
+      "url": "https://appfoy.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "FÖY", "item": "https://appfoy.com" },
+        { "@type": "ListItem", "position": 2, "name": "Finansal Özgürlük Hesaplama", "item": "https://appfoy.com/finansal-ozgurluk-hesaplama" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://appfoy.com/finansal-ozgurluk-hesaplama#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Finansal özgürlük için ne kadar para lazım?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En yaygın ölçüt %4 kuralıdır: yıllık giderinin 25 katı. Yıllık 600.000 TL harcayan biri için hedef 15.000.000 TL olur. Bu bir kural değil, bir varsayımdır; hangi getiri ve enflasyon beklentisiyle kurduğun sonucu tamamen değiştirir." }
+        },
+        {
+          "@type": "Question",
+          "name": "%4 kuralı Türkiye'de geçerli mi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "%4 kuralı ABD hisse ve tahvil piyasasının uzun dönemli verisinden türetilmiştir. Yüksek ve oynak enflasyon ortamında birebir uygulanması tartışmalıdır. Bu yüzden araçta enflasyon alanı var: doldurduğunda sonucu bugünün parasıyla, reel getiri üzerinden görürsün." }
+        },
+        {
+          "@type": "Question",
+          "name": "Hesaplama nasıl yapılıyor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hedef = yıllık gider × 25. Ardından mevcut portföy her ay beklenen getirinin on ikide biri kadar büyütülür, ay sonunda aylık katkı eklenir ve bu döngü hedefe ulaşana kadar sürer. Sonuç, geçen ay sayısının yıla yuvarlanmasıyla bulunur. FÖY uygulaması da birebir aynı hesabı yapar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Girdiğim sayılar bir yere gönderiliyor mu?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Hesaplama tamamen tarayıcında çalışır. Girdiğin hiçbir sayı sunucuya gönderilmez, kaydedilmez; sayfayı kapattığında kaybolur. Kayıt veya e-posta istemiyoruz." }
+        },
+        {
+          "@type": "Question",
+          "name": "Bu bir yatırım tavsiyesi mi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Değil. FÖY yatırım danışmanlığı hizmeti sunmaz. Bu sayfadaki hesaplama, senin girdiğin varsayımların matematiksel sonucudur; getiri vaadi ya da tavsiye içermez. Geçmiş getiriler gelecek için garanti oluşturmaz." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --navy-900:#090F1E;--navy-850:#0D1426;--navy-800:#121B31;--navy-700:#1A2442;
+    --line:rgba(201,166,90,.16);--line-strong:rgba(201,166,90,.32);
+    --bordo:#B5374F;--bordo-bright:#D24C66;--gold:#C9A65A;--gold-dim:rgba(201,166,90,.6);
+    --cream:#F2EFE9;--muted:#9098AE;--up:#45C58E;--down:#E06A7E;
+    --display:'Spectral',Georgia,serif;--body:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--navy-900);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--bordo);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold-dim)}
+  h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:.005em;line-height:1.2}
+  h1{font-size:clamp(32px,5.4vw,50px);margin:14px 0 18px;text-wrap:balance}
+  h2{font-size:clamp(25px,3.6vw,34px);margin-bottom:14px;text-wrap:balance}
+  h3{font-weight:600;font-size:19px;margin-bottom:6px}
+  p{color:var(--cream)}
+  .lead{color:var(--muted);font-size:clamp(16px,1.7vw,19px);max-width:60ch}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15px;padding:14px 22px;border-radius:13px;cursor:pointer;border:1px solid transparent;transition:transform .18s,background .18s,border-color .18s}
+  .btn-primary{background:var(--bordo);color:#fff}
+  .btn-primary:hover{background:var(--bordo-bright);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;border-color:var(--line-strong);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(9,15,30,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav-in .brand img{width:34px;height:34px;border-radius:9px}
+  .nav-back{font-size:14.5px;color:var(--muted)}
+  .nav-back:hover{color:var(--gold)}
+
+  header.hero{padding:56px 0 8px}
+  section{padding:48px 0;border-top:1px solid var(--line)}
+
+  /* ── HESAPLAYICI ─────────────────────────────────────────── */
+  .calc{margin:30px 0 8px;border-radius:20px;background:var(--navy-850);border:1px solid var(--line-strong);overflow:hidden}
+  .calc-in{padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .fld label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+  .fld .ip{display:flex;align-items:center;background:var(--navy-900);border:1px solid var(--line);border-radius:12px;transition:border-color .16s}
+  .fld .ip:focus-within{border-color:var(--gold-dim)}
+  .fld input{flex:1;min-width:0;background:none;border:none;color:var(--cream);font-family:var(--mono);font-size:17px;padding:13px 12px;width:100%}
+  .fld input:focus{outline:none}
+  .fld .unit{font-family:var(--mono);font-size:14px;color:var(--muted);padding:0 14px 0 4px;flex:none}
+  .fld .hint{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .out{border-top:1px solid var(--line-strong);background:var(--navy-800);padding:24px}
+  .out-hero{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+  .out-hero .big{flex:1;min-width:230px}
+  .out-lab{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .out-val{font-family:var(--display);font-size:clamp(30px,6vw,46px);font-weight:600;line-height:1.05;color:var(--gold);font-variant-numeric:tabular-nums}
+  .out-sub{font-size:14px;color:var(--muted);margin-top:6px}
+
+  .makam{flex:none;display:flex;align-items:center;gap:13px;padding:13px 18px;border-radius:14px;background:var(--navy-700);border:1px solid var(--line)}
+  .makam .ico{font-size:26px;line-height:1}
+  .makam .mn{font-family:var(--display);font-size:19px;font-weight:600}
+  .makam .md{font-size:12px;color:var(--muted)}
+
+  .prog{height:9px;border-radius:99px;background:var(--navy-700);border:1px solid var(--line);overflow:hidden;margin-bottom:6px}
+  .prog i{display:block;height:100%;border-radius:99px;background:var(--gold);transition:width .35s ease}
+  .prog-cap{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:22px}
+  .stat{padding:16px 18px;border-radius:14px;background:var(--navy-850);border:1px solid var(--line)}
+  .stat .sl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .stat .sv{font-family:var(--mono);font-size:19px;color:var(--cream);font-variant-numeric:tabular-nums}
+  .stat.real .sv{color:var(--up)}
+  .stat.warn{border-color:rgba(224,106,126,.32);background:rgba(224,106,126,.07)}
+  .stat.warn .sv{color:var(--down)}
+
+  .out-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);line-height:1.55}
+  .out-note b{color:var(--gold);font-weight:600}
+
+  .honest{margin-top:22px;padding:18px 20px;border-radius:14px;background:rgba(181,55,79,.08);border:1px solid rgba(181,55,79,.28)}
+  .honest p{font-size:15px}
+  .honest b{color:var(--gold)}
+
+  ol.steps{margin:20px 0 0;padding:0;list-style:none;counter-reset:s}
+  ol.steps li{counter-increment:s;position:relative;padding:0 0 16px 46px;color:var(--muted);font-size:15.5px}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:-1px;width:30px;height:30px;border-radius:9px;background:var(--navy-700);border:1px solid var(--line-strong);color:var(--gold);font-family:var(--mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+  ol.steps li b{color:var(--cream);font-weight:600}
+  ol.steps li code{font-family:var(--mono);font-size:13.5px;color:var(--gold)}
+
+  .tblwrap{overflow-x:auto;margin-top:20px;border-radius:14px;border:1px solid var(--line)}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid rgba(201,166,90,.1);white-space:nowrap}
+  th{background:var(--navy-800);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  td{color:var(--muted)}
+  td.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  td.nm{color:var(--cream);font-family:var(--display);font-size:16px}
+  tr:last-child td{border-bottom:0}
+  tr.now td{background:rgba(201,166,90,.07)}
+  tr.now td.nm{color:var(--gold)}
+  .tbl-cap{font-size:13px;color:var(--muted);margin-top:10px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+  .card{padding:20px;border-radius:15px;background:var(--navy-850);border:1px solid var(--line)}
+  .card p{font-size:14.5px;color:var(--muted);line-height:1.55}
+
+  .cta{margin-top:24px;padding:26px;border-radius:18px;background:var(--navy-800);border:1px solid var(--line-strong)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+
+  .faq{margin-top:18px}
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  details summary{cursor:pointer;font-weight:600;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;min-height:44px}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";color:var(--gold);font-family:var(--mono);font-size:20px;flex:none}
+  details[open] summary::after{content:"−"}
+  details p{margin-top:10px;color:var(--muted);font-size:15px}
+
+  footer{padding:38px 0 46px;border-top:1px solid var(--line)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:var(--muted);margin-bottom:18px}
+  .foot-links a:hover{color:var(--gold)}
+  .disclaimer{font-size:12.5px;color:var(--muted);line-height:1.55;opacity:.8}
+
+  @media(max-width:560px){
+    body{font-size:16px}
+    .calc-in,.out{padding:18px}
+    section{padding:38px 0}
+    .cta .btn{width:100%}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="FÖY" /></a>
+    <a class="nav-back" href="/">← FÖY ana sayfa</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Ücretsiz hesaplayıcı</span>
+    <h1>Finansal Özgürlük Hesaplama</h1>
+    <p class="lead">Yıllık giderini yaz; hedefini, bugün yolun neresinde olduğunu ve mevcut hızınla hangi yıl özgür olacağını gör. Kayıt yok, e-posta yok, girdiğin sayılar hiçbir yere gitmiyor.</p>
+
+    <div class="calc">
+      <div class="calc-in">
+        <div class="fld">
+          <label for="gider">Yıllık giderin</label>
+          <div class="ip"><input id="gider" type="text" inputmode="numeric" value="600.000" aria-describedby="gider-h" /><span class="unit">TL</span></div>
+          <p class="hint" id="gider-h">Bir yılda yaşamak için harcadığın toplam.</p>
+        </div>
+        <div class="fld">
+          <label for="portfoy">Şu anki portföyün</label>
+          <div class="ip"><input id="portfoy" type="text" inputmode="numeric" value="250.000" aria-describedby="portfoy-h" /><span class="unit">TL</span></div>
+          <p class="hint" id="portfoy-h">Birikimlerinin bugünkü toplam değeri.</p>
+        </div>
+        <div class="fld">
+          <label for="katki">Aylık katkın</label>
+          <div class="ip"><input id="katki" type="text" inputmode="numeric" value="15.000" aria-describedby="katki-h" /><span class="unit">TL</span></div>
+          <p class="hint" id="katki-h">Her ay portföyüne eklediğin tutar.</p>
+        </div>
+        <div class="fld">
+          <label for="getiri">Yıllık getiri beklentin</label>
+          <div class="ip"><input id="getiri" type="text" inputmode="decimal" value="12" aria-describedby="getiri-h" /><span class="unit">%</span></div>
+          <p class="hint" id="getiri-h">Senin varsayımın — biz bir rakam önermiyoruz.</p>
+        </div>
+        <div class="fld">
+          <label for="enflasyon">Yıllık enflasyon beklentin</label>
+          <div class="ip"><input id="enflasyon" type="text" inputmode="decimal" value="" placeholder="boş bırakabilirsin" aria-describedby="enf-h" /><span class="unit">%</span></div>
+          <p class="hint" id="enf-h">Doldurursan sonucu <b>bugünün parasıyla</b> da gösterir.</p>
+        </div>
+      </div>
+
+      <div class="out" id="out" aria-live="polite">
+        <div class="out-hero">
+          <div class="big">
+            <div class="out-lab">Finansal özgürlük hedefin</div>
+            <div class="out-val" id="hedef">15.000.000 TL</div>
+            <div class="out-sub" id="hedef-alt">Yıllık giderinin 25 katı — %4 kuralı</div>
+          </div>
+          <div class="makam" id="makam">
+            <span class="ico" id="makam-ico">🧲</span>
+            <div>
+              <div class="mn" id="makam-ad">Mecal</div>
+              <div class="md" id="makam-desc">Birikim çekiliyor</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prog"><i id="bar" style="width:1.7%"></i></div>
+        <div class="prog-cap"><span id="pct-txt">%1,7 tamamlandı</span><span id="kalan-txt">14.750.000 TL kaldı</span></div>
+
+        <div class="grid3">
+          <div class="stat"><div class="sl">Özgürlük yılı</div><div class="sv" id="yil">—</div></div>
+          <div class="stat"><div class="sl">Kalan süre</div><div class="sv" id="sure">—</div></div>
+          <div class="stat real" id="real-box" hidden><div class="sl">Bugünün parasıyla</div><div class="sv" id="yil-real">—</div></div>
+        </div>
+
+        <p class="out-note" id="not">Bu sonuç <b>senin girdiğin varsayımların</b> matematiksel çıktısıdır — bir tahmin ya da vaat değil. Getiri beklentini bir puan değiştirmek yılı yıllarca kaydırabilir; birkaç değer deneyip ne kadar duyarlı olduğunu görmen en faydalısı.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Hesap tam olarak nasıl yapılıyor</h2>
+    <p class="lead">Açık olsun: burada gizli bir model yok. Beş satırlık bir hesap, ve FÖY uygulaması da birebir aynısını yapıyor.</p>
+    <ol class="steps">
+      <li><b>Hedef bulunur.</b> <code>hedef = yıllık gider × 25</code> — %4 kuralının doğrudan karşılığı.</li>
+      <li><b>Bugünkü konum ölçülür.</b> <code>oran = portföy ÷ hedef</code>, %100'de kesilir.</li>
+      <li><b>Her ay portföy büyütülür.</b> <code>portföy = portföy × (1 + getiri ÷ 12)</code> — yıllık getiri on ikiye bölünür.</li>
+      <li><b>Ay sonunda katkı eklenir.</b> Katkı büyümeden <b>sonra</b> gelir; yani o ayın getirisini kazanmaz.</li>
+      <li><b>Hedefe ulaşılan ay sayılır</b> ve yıla yuvarlanır. Hesap 600 ayda (50 yıl) durur — ötesi anlamlı bir tahmin değil.</li>
+    </ol>
+
+    <div class="honest">
+      <p><b>Enflasyon alanını doldurursan</b> getiri beklentin reel getiriye çevrilir: <code style="font-family:var(--mono);font-size:14px;color:var(--gold)">reel = (1 + getiri) ÷ (1 + enflasyon) − 1</code>. Yaklaşık bir çıkarma değil, tam formül. Sonuç o zaman "bugünün parasıyla" okunur — ve genelde nominal yıldan çok daha uzaktır. Türkiye'de bu farkı görmek, hesabın en önemli kısmı.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>%4 kuralı ne diyor, neyi varsayıyor</h2>
+    <p class="lead">Kuralın kendisi basit: portföyünden her yıl %4 çekersen, para ömrün boyunca yetmeli. Tersten okunuşu şu — <b>yıllık giderinin 25 katına</b> ulaştığın gün çalışmak zorunda değilsin.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Nereden geldi</h3>
+        <p>1990'larda ABD hisse ve tahvil piyasasının uzun dönemli verisi üzerinde yapılan çalışmalardan. Yani belirli bir piyasanın, belirli bir dönemine ait bir gözlem.</p>
+      </div>
+      <div class="card">
+        <h3>Neyi varsayıyor</h3>
+        <p>Uzun vadede reel getirinin çekiş oranını taşıyacağını, giderinin enflasyonla birlikte artacağını ve portföyünü paniğe kapılıp bozmayacağını.</p>
+      </div>
+      <div class="card">
+        <h3>Türkiye'de neden dikkat</h3>
+        <p>Yüksek ve oynak enflasyon, kuralın türetildiği ortamdan farklı. Bu yüzden burada nominal yılı tek başına okumak yanıltıcı; enflasyon alanını doldurup reel sonucu da gör.</p>
+      </div>
+      <div class="card">
+        <h3>Kural değil, çıpa</h3>
+        <p>%4 bir yasa değil, konuşmayı başlatan bir sayı. Bazıları %3'ü güvenli, bazıları %5'i yeterli buluyor. Önemli olan hedefin bir sayısı olması — hangi sayı olduğu ikinci soru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Yolun sekiz makamı</h2>
+    <p class="lead">FÖY yolculuğu yüzde olarak değil, <b>makam</b> olarak anlatır. Hesaplayıcı yukarıda sana hangi makamda olduğunu söylüyor; tablo tamamını gösteriyor.</p>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>Makam</th><th>Tamamlanma</th><th>Ne anlama geliyor</th></tr></thead>
+        <tbody id="makam-tablo"></tbody>
+      </table>
+    </div>
+    <p class="tbl-cap">Adlar Türkçenin eski finans ve yol sözcüklerinden seçildi: <i>kadem</i> adım, <i>mecal</i> güç, <i>revan</i> akıp giden, <i>dem</i> an, <i>kifayet</i> yeterlilik, <i>mizan</i> terazi, <i>gani</i> bolluk, <i>mecen</i> bedelsiz.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Hesabı bir kez yapmak yetmez</h2>
+    <p class="lead">Bu sayfa sana bugünün fotoğrafını veriyor. Ama hedefe olan mesafen her gün değişiyor — portföyün değer kazanıyor, giderin artıyor, katkın birikiyor. Onu takip etmek ayrı bir iş.</p>
+
+    <div class="cta">
+      <h3>FÖY bu hesabı her gün senin için yapar</h3>
+      <p style="color:var(--muted);font-size:15px;margin-top:8px">Hisse, fon, altın, döviz, kripto ve nakit varlıklarını ekle; güncel fiyatlar otomatik gelir, hedefe olan mesafen ve makamın kendiliğinden güncellenir. Verilerin yalnızca cihazında kalır — hesap oluşturmuyorsun, bulut senkronu yok.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6760929887">App Store'dan indir</a>
+        <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.denizorcun.foy">Google Play'den indir</a>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;color:var(--muted);font-size:15px">Tabloyla devam etmeyi tercih ediyorsan: <a href="/portfoy-takip-excel" style="color:var(--gold);text-decoration:underline">ücretsiz Portföy Takip Excel Şablonu</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sık sorulanlar</h2>
+    <div class="faq">
+      <details open><summary>Finansal özgürlük için ne kadar para lazım?</summary><p>En yaygın ölçüt %4 kuralı: yıllık giderinin 25 katı. Yıllık 600.000 TL harcayan biri için hedef 15.000.000 TL olur. Ama bu bir kural değil, bir varsayım — hangi getiri ve enflasyon beklentisiyle kurduğun sonucu tamamen değiştirir.</p></details>
+      <details><summary>%4 kuralı Türkiye'de geçerli mi?</summary><p>Kural ABD piyasasının uzun dönemli verisinden türetildi. Yüksek ve oynak enflasyon ortamında birebir uygulanması tartışmalı. Bu yüzden araçta enflasyon alanı var: doldurduğunda sonucu bugünün parasıyla, reel getiri üzerinden görürsün. Nominal ile reel arasındaki fark Türkiye'de genelde çarpıcıdır.</p></details>
+      <details><summary>Girdiğim sayılar bir yere gönderiliyor mu?</summary><p>Hayır. Hesap tamamen tarayıcında çalışıyor; girdiğin hiçbir sayı sunucuya gitmiyor, kaydedilmiyor. Sayfayı kapattığında kayboluyor. Kayıt ya da e-posta istemiyoruz.</p></details>
+      <details><summary>Aylık katkımı artırsam ne olur?</summary><p>Dene — sayıyı değiştirdiğin an sonuç güncellenir. Genelde erken yıllarda katkıyı artırmak, getiri beklentisini artırmaktan daha etkili olur; çünkü bileşik getirinin üzerinde çalışacağı anapara büyür.</p></details>
+      <details><summary>Bu bir yatırım tavsiyesi mi?</summary><p>Değil. FÖY yatırım danışmanlığı hizmeti sunmaz ve 6362 sayılı Sermaye Piyasası Kanunu kapsamında yetkili bir kuruluş değildir. Buradaki hesap senin girdiğin varsayımların matematiksel sonucudur; getiri vaadi ya da tavsiye içermez.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="/">Ana sayfa</a>
+      <a href="/portfoy-takip-excel">Portföy Takip Excel</a>
+      <a href="/gizlilik.html">Gizlilik Politikası</a>
+      <a href="/kosullar.html">Kullanım Koşulları (EULA)</a>
+      <a href="mailto:destek@appfoy.com">Destek</a>
+    </div>
+    <p class="disclaimer">FÖY (Finansal Özgürlük Yolculuğu) bir kişisel portföy ve finansal özgürlük takip uygulamasıdır. Yatırım danışmanlığı hizmeti sunmaz; bu sayfadaki hiçbir hesaplama, örnek sayı veya açıklama alım-satım tavsiyesi, garanti ya da getiri vaadi niteliği taşımaz. %4 kuralı varsayımsal bir modeldir; geçmiş getiriler gelecek için garanti oluşturmaz. Hesaplamalar kullanıcının girdiği varsayımlara dayanır ve yatırım kararlarının sorumluluğu tamamen kullanıcıya aittir. © 2026 FÖY.</p>
+  </div>
+</footer>
+
+<script>
+// ── MAKAM MERDİVENİ ────────────────────────────────────────────────────────
+// FÖY uygulamasındaki constants/levels.js ile BİREBİR aynı: sınırlar, adlar,
+// ikonlar, açıklamalar. İki yerde ayrışırsa kullanıcı sayfada bir makam,
+// uygulamada başkasını görür.
+var MAKAMLAR = [
+  { ad:'Kadem',   min:0,  max:5,   ico:'🪴', desc:'Yolculuk başlıyor'     },
+  { ad:'Mecal',   min:5,  max:15,  ico:'🧲', desc:'Birikim çekiliyor'     },
+  { ad:'Revan',   min:15, max:30,  ico:'⚙️', desc:'Sistem kuruluyor'      },
+  { ad:'Dem',     min:30, max:50,  ico:'🏛️', desc:'Sermaye büyüyor'       },
+  { ad:'Kifayet', min:50, max:65,  ico:'📡', desc:'Para çalışıyor'        },
+  { ad:'Mizan',   min:65, max:80,  ico:'🌊', desc:'Özgürlük hissediliyor' },
+  { ad:'Gani',    min:80, max:95,  ico:'🚀', desc:'Rampa tamamdır'        },
+  { ad:'Mecen',   min:95, max:101, ico:'🔥', desc:'Finansal özgürsün'     }
+];
+function makamBul(pct){
+  for (var i=0;i<MAKAMLAR.length;i++) if (pct >= MAKAMLAR[i].min && pct < MAKAMLAR[i].max) return MAKAMLAR[i];
+  return MAKAMLAR[7];
+}
+
+// ── SAYI BİÇİMİ ────────────────────────────────────────────────────────────
+var nf0 = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 });
+var nf1 = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+// "1.500.000" ve "1500000" ikisini de okur; ondalık virgülü kabul eder.
+function oku(s){
+  if (s == null) return 0;
+  var t = String(s).trim().replace(/\s/g,'').replace(/\./g,'').replace(',', '.');
+  var n = parseFloat(t);
+  return isFinite(n) && n > 0 ? n : 0;
+}
+
+// ── PROJEKSİYON ────────────────────────────────────────────────────────────
+// App.js → calcProjMonths ile BİREBİR aynı döngü:
+//   rm = yıllık oran / 12  (bileşik on ikinci kök DEĞİL — uygulama da böyle)
+//   her ay: portföy = portföy × (1 + rm) + aylık katkı   ← katkı ay SONUNDA
+//   600 ay (50 yıl) üst sınırı
+// Sayfa ile uygulama ayrışırsa kullanıcı iki farklı yıl görür; o yüzden
+// buradaki üç satır uygulamadaki üç satırla aynı kalmak zorunda.
+function projeksiyonAy(hedef, mevcut, oran, aylik){
+  if (!hedef || hedef <= mevcut) return 0;
+  if (oran <= 0 && aylik <= 0) return null;       // hedefe hiç ulaşılamaz
+  var rm = oran / 12, pv = mevcut, m = 0;
+  while (pv < hedef && m < 600) { pv = pv * (1 + rm) + aylik; m++; }
+  return pv >= hedef ? m : null;                  // 600 ayda ulaşamadı
+}
+
+function sureMetni(ay){
+  var y = Math.floor(ay / 12), k = ay % 12;
+  if (ay === 0) return 'Hedefe ulaştın';
+  if (y === 0)  return k + ' ay';
+  if (k === 0)  return y + ' yıl';
+  return y + ' yıl ' + k + ' ay';
+}
+
+function hesapla(){
+  var gider  = oku(document.getElementById('gider').value);
+  var mevcut = oku(document.getElementById('portfoy').value);
+  var aylik  = oku(document.getElementById('katki').value);
+  var oran   = oku(document.getElementById('getiri').value) / 100;
+  var enf    = oku(document.getElementById('enflasyon').value) / 100;
+
+  var hedef = gider * 25;
+  var pct   = hedef > 0 ? Math.min((mevcut / hedef) * 100, 100) : 0;
+  var mk    = makamBul(pct);
+
+  document.getElementById('hedef').textContent = hedef > 0 ? nf0.format(hedef) + ' TL' : '—';
+  document.getElementById('hedef-alt').textContent = hedef > 0
+    ? 'Yıllık giderinin 25 katı — %4 kuralı'
+    : 'Hedefi görmek için yıllık giderini yaz.';
+
+  document.getElementById('makam-ico').textContent  = mk.ico;
+  document.getElementById('makam-ad').textContent   = mk.ad;
+  document.getElementById('makam-desc').textContent = mk.desc;
+
+  document.getElementById('bar').style.width = Math.max(pct, 0.4) + '%';
+  document.getElementById('pct-txt').textContent = '%' + nf1.format(pct) + ' tamamlandı';
+  var kalanTutar = Math.max(hedef - mevcut, 0);
+  document.getElementById('kalan-txt').textContent = hedef > 0
+    ? nf0.format(kalanTutar) + ' TL kaldı' : '';
+
+  var yilEl = document.getElementById('yil'), sureEl = document.getElementById('sure');
+  var kutu  = yilEl.parentElement;
+  var buYil = new Date().getFullYear();
+
+  if (hedef <= 0) {
+    yilEl.textContent = '—'; sureEl.textContent = '—'; kutu.classList.remove('warn');
+  } else if (hedef <= mevcut) {
+    yilEl.textContent = String(buYil); sureEl.textContent = 'Hedefe ulaştın';
+    kutu.classList.remove('warn');
+  } else {
+    var ay = projeksiyonAy(hedef, mevcut, oran, aylik);
+    if (ay === null) {
+      yilEl.textContent = '50+ yıl'; sureEl.textContent = 'Bu hızla ulaşılmıyor';
+      kutu.classList.add('warn');
+    } else {
+      yilEl.textContent = String(buYil + Math.ceil(ay / 12));
+      sureEl.textContent = sureMetni(ay);
+      kutu.classList.remove('warn');
+    }
+  }
+
+  // Reel (bugünün parasıyla) — uygulamadaki rReal ile aynı tam formül.
+  var rbox = document.getElementById('real-box');
+  if (enf > 0 && hedef > mevcut && hedef > 0) {
+    var reel = ((1 + oran) / (1 + enf)) - 1;
+    var ayR  = projeksiyonAy(hedef, mevcut, Math.max(reel, 0.001), aylik);
+    document.getElementById('yil-real').textContent =
+      ayR === null ? '50+ yıl' : String(buYil + Math.ceil(ayR / 12));
+    rbox.hidden = false;
+  } else {
+    rbox.hidden = true;
+  }
+}
+
+// Makam tablosunu tek kaynaktan bas — elle yazılmış ikinci bir liste olmasın.
+(function(){
+  var tb = document.getElementById('makam-tablo'), h = '';
+  for (var i=0;i<MAKAMLAR.length;i++){
+    var m = MAKAMLAR[i];
+    var ust = m.max === 101 ? '100' : m.max;
+    h += '<tr data-mk="' + m.ad + '"><td class="nm">' + m.ico + ' ' + m.ad + '</td>' +
+         '<td class="mono">%' + m.min + ' – %' + ust + '</td><td>' + m.desc + '</td></tr>';
+  }
+  tb.innerHTML = h;
+})();
+
+// Girdi değişince hem hesap hem tablodaki vurgulu satır güncellenir.
+function guncelle(){
+  hesapla();
+  var gider = oku(document.getElementById('gider').value);
+  var mevcut = oku(document.getElementById('portfoy').value);
+  var hedef = gider * 25;
+  var pct = hedef > 0 ? Math.min((mevcut / hedef) * 100, 100) : -1;
+  var aktif = pct >= 0 ? makamBul(pct).ad : null;
+  var satirlar = document.querySelectorAll('#makam-tablo tr');
+  for (var i=0;i<satirlar.length;i++){
+    satirlar[i].classList.toggle('now', satirlar[i].getAttribute('data-mk') === aktif);
+  }
+}
+
+var alanlar = ['gider','portfoy','katki','getiri','enflasyon'];
+for (var i=0;i<alanlar.length;i++){
+  document.getElementById(alanlar[i]).addEventListener('input', guncelle);
+}
+guncelle();
+</script>
+
+</body>
+</html>
