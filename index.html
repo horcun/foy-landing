@@ -277,9 +277,12 @@
      bilinçli olarak ondan sakin durur: kutu içinde, h3 boyutunda başlık,
      bordo yerine hayalet buton. FÖY ana ürün, Excel ücretsiz yardımcı kaynak. */
   .xls-cta{padding:0 0 92px}
-  .xls-box{max-width:640px;margin:0 auto;text-align:center;padding:36px 28px;border-radius:20px;background:var(--navy-850);border:1px solid var(--line-strong)}
+  .xls-box{max-width:740px;margin:0 auto;text-align:center;padding:36px 28px;border-radius:20px;background:var(--navy-850);border:1px solid var(--line-strong)}
   .xls-box h3{font-size:clamp(21px,2.6vw,27px);margin:14px 0 10px}
-  .xls-box p{color:var(--muted);font-size:15.5px;max-width:46ch;margin:0 auto 22px}
+  .xls-box p{color:var(--muted);font-size:15.5px;max-width:56ch;margin:0 auto 22px}
+  /* Uc dugme 640px kartta sikisiyordu; kart genisletildi ve dugmeler sarmaliyor. */
+  .kaynak-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .kaynak-btns .btn svg{width:18px;height:18px;fill:currentColor;flex:none}
   footer{border-top:1px solid var(--line);padding:46px 0 56px}
   .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center}
   .foot-links{display:flex;flex-wrap:wrap;gap:26px;font-size:14px;color:var(--muted)}
@@ -547,12 +550,13 @@
 <section class="xls-cta">
   <div class="wrap reveal">
     <div class="xls-box">
-      <span class="eyebrow center">Ücretsiz kaynak</span>
-      <h3>Portföy Takip Excel Şablonu</h3>
-      <p>İkisi de ücretsiz ve kayıt istemez. <b>Excel şablonu</b> maliyet, kâr/zarar ve portföy dağılımını kendisi hesaplar. <b>Özgürlük hesaplayıcısı</b> yıllık giderinden hedefini ve özgürlük yılını çıkarır.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-        <a class="btn btn-ghost" href="/portfoy-takip-excel">Excel Şablonunu İndir</a>
-        <a class="btn btn-ghost" href="/finansal-ozgurluk-hesaplama">Özgürlük Hesaplayıcısını Aç</a>
+      <span class="eyebrow center">Ücretsiz kaynaklar</span>
+      <h3>Üç Ücretsiz Araç</h3>
+      <p>Üçü de ücretsiz, üçü de kayıt ve e-posta istemiyor. <b>Excel şablonu</b> maliyet, kâr/zarar ve portföy dağılımını kendisi hesaplar. <b>Özgürlük hesaplayıcısı</b> yıllık giderinden hedefini ve özgürlük yılını çıkarır. <b>Bileşik getiri hesaplayıcısı</b> katkı artışı ve enflasyon dahil yıl yıl gösterir.</p>
+      <div class="kaynak-btns">
+        <a class="btn btn-ghost" href="/portfoy-takip-excel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>Excel Şablonu</a>
+        <a class="btn btn-ghost" href="/finansal-ozgurluk-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>Özgürlük Hesaplayıcı</a>
+        <a class="btn btn-ghost" href="/bilesik-getiri-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>Bileşik Getiri</a>
       </div>
     </div>
   </div>
