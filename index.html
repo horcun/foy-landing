@@ -276,7 +276,24 @@
   /* Ücretsiz kaynak CTA'sı — FÖY indirme CTA'sının ARDINDAN gelir ve
      bilinçli olarak ondan sakin durur: kutu içinde, h3 boyutunda başlık,
      bordo yerine hayalet buton. FÖY ana ürün, Excel ücretsiz yardımcı kaynak. */
-  .xls-cta{padding:0 0 92px}
+  /* .xls-cta bolumu KALDIRILDI (kart hero'ya tasindi); .xls-box stilleri
+     asagida duruyor cunku kart onlari kullanmaya devam ediyor. */
+  /* Hero baglamina uyarlama: kart hero'da ikincil bir blok, ayri bir bolum
+     degil. Metin AYNI; yalniz olcu ve bosluk sakinlestirildi ki H1 ve
+     magaza butonlariyla yarismasin. */
+  .hero-tools{margin-top:44px}
+  .hero-tools .xls-box{padding:28px 24px;max-width:700px}
+  .hero-tools .xls-box h3{font-size:clamp(19px,2.2vw,23px);margin:12px 0 8px}
+  .hero-tools .xls-box p{font-size:14.5px;margin-bottom:18px}
+  @media(max-width:640px){
+    .hero-tools{margin-top:32px}
+    .hero-tools .xls-box{padding:22px 18px;border-radius:16px}
+    .hero-tools .xls-box p{font-size:14px}
+    /* Dar ekranda uc hayalet buton yan yana sikisiyordu; tam genislik
+       aliyorlar, boylece dokunma hedefi de buyuyor. */
+    .hero-tools .kaynak-btns{flex-direction:column;gap:10px}
+    .hero-tools .kaynak-btns .btn{width:100%;justify-content:center}
+  }
   .xls-box{max-width:740px;margin:0 auto;text-align:center;padding:36px 28px;border-radius:20px;background:var(--navy-850);border:1px solid var(--line-strong)}
   .xls-box h3{font-size:clamp(21px,2.6vw,27px);margin:14px 0 10px}
   .xls-box p{color:var(--muted);font-size:15.5px;max-width:56ch;margin:0 auto 22px}
@@ -293,17 +310,6 @@
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.kcard{opacity:1;transform:none}}
 
-  /* ── ARAÇ ŞERİDİ — üç ücretsiz araca her sayfadan tek dokunuş ─────────
-     Sticky nav'a eklenmedi: ana sayfadaki nav zaten dolu ve 880px altında
-     .nav-links gizleniyor. Ayrı şerit mobilde de görünür kalıyor ve dar
-     ekranda yatay kaydırılıyor. */
-  .tools{border-bottom:1px solid var(--line);background:var(--navy-850)}
-  .tools-in{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:12px 0}
-  .tool{display:inline-flex;align-items:center;gap:10px;flex:none;padding:10px 16px;border-radius:12px;background:var(--navy-800);border:1px solid var(--line);color:var(--muted);font-size:14.5px;font-weight:500;white-space:nowrap;transition:border-color .16s,color .16s,transform .16s}
-  .tool svg{width:19px;height:19px;flex:none;fill:currentColor}
-  .tool:hover{border-color:var(--gold-dim);color:var(--cream);transform:translateY(-1px)}
-  .tool:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .tool[aria-current="page"]{color:var(--gold);border-color:var(--line-strong);background:rgba(201,166,90,.09)}
 </style>
 </head>
 <body>
@@ -324,22 +330,6 @@
   </div>
 </nav>
 
-<div class="tools">
-  <div class="wrap tools-in">
-    <a class="tool" href="/portfoy-takip-excel">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>
-      Portföy Takip Excel
-    </a>
-    <a class="tool" href="/finansal-ozgurluk-hesaplama">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>
-      Özgürlük Hesaplayıcı
-    </a>
-    <a class="tool" href="/bilesik-getiri-hesaplama">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>
-      Bileşik Getiri
-    </a>
-  </div>
-</div>
 
 <header class="hero">
   <div class="wrap">
@@ -359,6 +349,24 @@
           </a>
         </div>
         <div class="trust">BIST <span>·</span> ABD Hisseleri <span>·</span> Fonlar <span>·</span> Kripto <span>·</span> Altın <span>·</span> Döviz <span>·</span> Emtia</div>
+      </div>
+
+      <!-- ÜCRETSİZ KAYNAKLAR — indirme butonlarinin HEMEN ALTINDA, ortali.
+           12 Eyl 2026: sayfanin en altindan BURAYA tasindi ve ust arac seridi
+           kaldirildi (serit mobilde kotu duruyordu). Kart bilinclice FÖY
+           indirme CTA'sindan SAKIN durur: hayalet buton, h3 baslik. Ana urun
+           FÖY; bunlar ucretsiz yardimci kaynaklar. -->
+      <div class="hero-tools reveal">
+    <div class="xls-box">
+          <span class="eyebrow center">Ücretsiz kaynaklar</span>
+          <h3>Üç Ücretsiz Araç</h3>
+          <p>Üçü de ücretsiz, üçü de kayıt ve e-posta istemiyor. <b>Excel şablonu</b> maliyet, kâr/zarar ve portföy dağılımını kendisi hesaplar. <b>Özgürlük hesaplayıcısı</b> yıllık giderinden hedefini ve özgürlük yılını çıkarır. <b>Bileşik getiri hesaplayıcısı</b> katkı artışı ve enflasyon dahil yıl yıl gösterir.</p>
+          <div class="kaynak-btns">
+            <a class="btn btn-ghost" href="/portfoy-takip-excel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>Excel Şablonu</a>
+            <a class="btn btn-ghost" href="/finansal-ozgurluk-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>Özgürlük Hesaplayıcı</a>
+            <a class="btn btn-ghost" href="/bilesik-getiri-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>Bileşik Getiri</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -546,21 +554,6 @@
   </div>
 </section>
 
-<!-- ÜCRETSİZ KAYNAK — Portföy Takip Excel Şablonu -->
-<section class="xls-cta">
-  <div class="wrap reveal">
-    <div class="xls-box">
-      <span class="eyebrow center">Ücretsiz kaynaklar</span>
-      <h3>Üç Ücretsiz Araç</h3>
-      <p>Üçü de ücretsiz, üçü de kayıt ve e-posta istemiyor. <b>Excel şablonu</b> maliyet, kâr/zarar ve portföy dağılımını kendisi hesaplar. <b>Özgürlük hesaplayıcısı</b> yıllık giderinden hedefini ve özgürlük yılını çıkarır. <b>Bileşik getiri hesaplayıcısı</b> katkı artışı ve enflasyon dahil yıl yıl gösterir.</p>
-      <div class="kaynak-btns">
-        <a class="btn btn-ghost" href="/portfoy-takip-excel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 4v3h5V7H5Zm7 0v3h7V7h-7ZM5 12v3h5v-3H5Zm7 0v3h7v-3h-7ZM5 17v2h5v-2H5Zm7 0v2h7v-2h-7Z"/></svg>Excel Şablonu</a>
-        <a class="btn btn-ghost" href="/finansal-ozgurluk-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 5.4-2.5 6.2a2 2 0 0 1-1.1 1.1l-6.2 2.5 2.5-6.2a2 2 0 0 1 1.1-1.1l6.2-2.5ZM12 10.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"/></svg>Özgürlük Hesaplayıcı</a>
-        <a class="btn btn-ghost" href="/bilesik-getiri-hesaplama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2Zm2-6h3v5H5v-5Zm5-4h3v9h-3v-9Zm5-5h3v14h-3V5ZM4.3 9.7 3 8.3l5.8-5.8 3.4 3.4L18 .1 21 3.1l-1.4 1.4-1.6-1.6-5.3 5.3-3.4-3.4-4 4.9Z"/></svg>Bileşik Getiri</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
