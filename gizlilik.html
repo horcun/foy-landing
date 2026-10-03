@@ -57,7 +57,7 @@
   <h2>3. Toplanan Teknik Veriler</h2>
   <p>Uygulamanın çalışmasını sürdürmek ve iyileştirmek için aşağıdaki <strong>kimliksiz</strong> teknik veriler toplanır. Bu verilerin hiçbiri sizi kişi olarak tanımlamaz ve <strong>hiçbiri portföyünüzün içeriğini içermez</strong>.</p>
   <ul>
-    <li><strong>Hata ve performans kayıtları — Sentry (sunucular Almanya'da).</strong> Uygulama çöktüğünde veya yavaşladığında hata izi, cihaz modeli, işletim sistemi sürümü ve uygulama sürümü kaydedilir. Amaç yalnızca hatayı bulup düzeltmektir.</li>
+    <li><strong>Hata ve performans kayıtları — Sentry (sunucular Almanya'da).</strong> Uygulama çöktüğünde veya yavaşladığında hata izi, cihaz modeli, işletim sistemi sürümü ve uygulama sürümü kaydedilir. Amaç yalnızca hatayı bulup düzeltmektir. Kişisel veri eki açıkça kapalıdır; performans izleri her oturumdan değil, örnekleme yoluyla toplanır.</li>
     <li><strong>Ürün kullanım olayları — PostHog (sunucular Avrupa Birliği'nde).</strong> Uygulamanın hangi noktalarında zorlandığınızı anlamak için sayılı ve adı belli olaylar kaydedilir: uygulamanın kurulması, güncellenmesi, açılması, ön plana gelmesi, arka plana alınması, tanıtım akışının tamamlanması, ilk varlığın eklenmesi, varlık ekleme ekranından çıkılması ve abonelik satın alınması. Bu olaylara <strong>yalnızca üç bilgi</strong> eşlik eder: platform (iOS/Android), uygulama sürümü ve bölge. Bölge <strong>cihazınızın dil/bölge ayarından</strong> okunur; IP adresi çözümlemesi sunucu tarafında <strong>kapatılmıştır</strong>. Cihaz kimliği uygulamanın ürettiği rastgele bir dizedir, kişisel bilgilerinizle ilişkilendirilmez. Ekran görüntüsü veya oturum kaydı (session replay) alınmaz; dokunuşların otomatik kaydı kapalıdır.</li>
     <li><strong>Abonelik durumu — RevenueCat.</strong> Aboneliğinizin aktif olup olmadığını doğrulamak için kullanılır ve kimliksiz (anonim) bir uygulama kullanıcı numarası ile çalışır. Ödeme bilgileriniz bu servise de, uygulamaya da ulaşmaz.</li>
   </ul>
@@ -74,17 +74,21 @@
     <li><strong>GitHub</strong> — yatırım fonu listeleri ve geçmiş fon fiyatları</li>
   </ul>
   <p>Bu isteklerde, her internet bağlantısında olduğu gibi temel ağ tanımlayıcıları (ör. IP adresi) ilgili servisin kendi gizlilik politikasına tabidir.</p>
+  <p>Ayrıca uygulama, yeni sürüm olup olmadığını öğrenmek için kimliksiz bir sorgu gönderir: iOS'ta Apple'ın herkese açık sürüm sorgusuna (itunes.apple.com), Android'de GitHub üzerindeki sürüm bilgisine (gist.githubusercontent.com). Bu sorgularda da kişisel veriniz veya portföy bilginiz yer almaz; temel ağ tanımlayıcıları ilgili servisin kendi gizlilik politikasına tabidir.</p>
 
   <h2>5. Ödeme ve Abonelik</h2>
   <p>Abonelik ve ödeme işlemleri tamamen <strong>Apple App Store</strong> veya <strong>Google Play</strong> altyapısı üzerinden yürütülür. Kart ve ödeme bilgileriniz uygulama tarafından görülmez, işlenmez veya saklanmaz.</p>
 
-  <h2>6. Çocukların Gizliliği</h2>
+  <h2>6. Veri Silme</h2>
+  <p>Uygulamayı sildiğinizde cihazdaki tüm yerel veriler kalıcı olarak silinir. Kendi iCloud hesabınıza aldığınız bir yedek varsa o yedek bu işlemle silinmez; iCloud ayarlarınızdan ayrıca silebilirsiniz.</p>
+
+  <h2>7. Çocukların Gizliliği</h2>
   <p>FÖY 18 yaşından küçük kullanıcılar için tasarlanmamıştır.</p>
 
-  <h2>7. Değişiklikler</h2>
+  <h2>8. Değişiklikler</h2>
   <p>Bu politika, uygulamanın davranışı değiştiğinde güncellenir. Güncelleme tarihi sayfanın başında yer alır.</p>
 
-  <h2>8. İletişim</h2>
+  <h2>9. İletişim</h2>
   <p>Gizlilik politikasına ilişkin sorularınız için: <a href="mailto:destek@appfoy.com">destek@appfoy.com</a></p>
 </div></main>
 <footer><div class="wrap">
