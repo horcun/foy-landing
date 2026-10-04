@@ -74,6 +74,30 @@
       "publisher": { "@id": "https://appfoy.com/#publisher" }
     },
     {
+      "@type": "VideoObject",
+      "@id": "https://appfoy.com/#film-tr",
+      "name": "FÖY Tanıtım Filmi (Türkçe, 45 sn)",
+      "description": "FÖY ile portföyünü, gelirini ve giderini tek yerde takip et; finansal özgürlüğe kaç gün kaldığını gör. 45 saniyelik Türkçe tanıtım filmi.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-tr-2026-09.jpg",
+      "uploadDate": "2026-09-27",
+      "duration": "PT45S",
+      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-tr-45sn-2026-09.mp4",
+      "inLanguage": "tr",
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://appfoy.com/#film-en",
+      "name": "FÖY Promo Video (English, 45 sec)",
+      "description": "Track your portfolio, income and expenses in one place and see how many days are left to financial freedom. 45-second English promo video.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-en-2026-09.jpg",
+      "uploadDate": "2026-09-27",
+      "duration": "PT45S",
+      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-en-45sn-2026-09.mp4",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://appfoy.com/#faq",
       "mainEntity": [
@@ -270,6 +294,14 @@
   details p{padding:0 4px 22px;color:var(--muted);font-size:15.5px;max-width:62ch}
   .faq p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 
+  /* tanıtım filmleri */
+  .films{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1040px;margin:0 auto}
+  .film{border:1px solid var(--line);border-radius:18px;padding:14px;background:rgba(255,255,255,.02);scroll-margin-top:84px}
+  .film video{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;display:block}
+  .film h3{font-family:var(--display);font-size:19px;font-weight:500;margin:14px 4px 4px}
+  .film p{color:var(--muted);font-size:14.5px;margin:0 4px 6px}
+  @media(max-width:760px){.films{grid-template-columns:1fr}}
+
   .endcta{text-align:center;padding:92px 0}
   .endcta h2{margin-bottom:18px}
   .endcta .badges{justify-content:center;margin-top:30px}
@@ -320,6 +352,7 @@
     <div class="nav-links">
       <a href="#ozellikler">Özellikler</a>
       <a href="#yolculuk">Seviyeler</a>
+      <a href="#tanitim-filmleri">Tanıtım</a>
       <a href="#fiyat">Fiyatlandırma</a>
       <a href="#sss">SSS</a>
     </div>
@@ -482,6 +515,34 @@
         <div class="ico"><svg width="22" height="22" fill="none" stroke="var(--gold)" stroke-width="1.6"><path d="M11 4a5 5 0 0 0-5 5v3l-1.5 2.5h13L16 12V9a5 5 0 0 0-5-5z"/><path d="M9.4 18a1.8 1.8 0 0 0 3.2 0"/></svg></div>
         <h3>İki tema, iki dil</h3>
         <p>Bordo ve Lacivert temalar. Arayüz Türkçe ve İngilizce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TANITIM FİLMLERİ -->
+<section id="tanitim-filmleri">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Tanıtım Filmleri</span>
+      <h2>45 saniyede FÖY.</h2>
+    </div>
+    <div class="films reveal">
+      <div class="film" id="film-tr">
+        <video controls playsinline preload="none" poster="assets/film/poster-tr-2026-09.jpg" aria-label="FÖY tanıtım filmi, Türkçe, 45 saniye">
+          <source src="assets/film/foy-tanitim-tr-45sn-2026-09.mp4" type="video/mp4" />
+          Tarayıcın videoyu oynatamıyor. <a href="assets/film/foy-tanitim-tr-45sn-2026-09.mp4">Filmi indir</a>.
+        </video>
+        <h3>Türkçe</h3>
+        <p>Sesli ve altyazılı · 45 sn</p>
+      </div>
+      <div class="film" id="film-en">
+        <video controls playsinline preload="none" poster="assets/film/poster-en-2026-09.jpg" aria-label="FÖY promo video, English, 45 seconds" lang="en">
+          <source src="assets/film/foy-tanitim-en-45sn-2026-09.mp4" type="video/mp4" />
+          Your browser cannot play this video. <a href="assets/film/foy-tanitim-en-45sn-2026-09.mp4">Download the video</a>.
+        </video>
+        <h3>English</h3>
+        <p>Voiced and subtitled · 45 sec</p>
       </div>
     </div>
   </div>
