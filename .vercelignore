@@ -1,0 +1,5 @@
+# Siteyle birlikte YAYINLANMAYACAK dosyalar (ziyaretçiye faydası yok).
+# tools/ = Excel şablonunu üreten/doğrulayan ve fiyat iddialarını kontrol eden
+# yerel betikler; README.md = depo açıklaması.
+tools/
+README.md

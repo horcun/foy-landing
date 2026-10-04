@@ -1,6 +1,6 @@
 // appfoy.com — fiyat iddiası tutarlılık kontrolü
 //
-//   node check-pricing.mjs
+//   node tools/check-pricing.mjs
 //
 // Sayfadaki aylık/yıllık fiyatı okur, "X AY BEDAVA" rozetini ve "%X tasarruf"
 // notunu bu fiyatlardan yeniden hesaplar, tutmuyorsa hata verir.
@@ -13,7 +13,7 @@
 
 import { readFileSync } from 'node:fs';
 
-const html = readFileSync(new URL('index.html', import.meta.url), 'utf8');
+const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const sayi = (s) => Number(String(s).replace(/\./g, '').replace(',', '.'));
 
 const fiyatlar = [...html.matchAll(/class="pprice">([\d.,]+)<small>\s*₺\/(ay|yıl)</g)]
