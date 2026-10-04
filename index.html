@@ -75,25 +75,49 @@
     },
     {
       "@type": "VideoObject",
-      "@id": "https://appfoy.com/#film-tr",
+      "@id": "https://appfoy.com/#film-tanitim-tr",
       "name": "FÖY Tanıtım Filmi (Türkçe, 45 sn)",
-      "description": "FÖY ile portföyünü, gelirini ve giderini tek yerde takip et; finansal özgürlüğe kaç gün kaldığını gör. 45 saniyelik Türkçe tanıtım filmi.",
-      "thumbnailUrl": "https://appfoy.com/assets/film/poster-tr-2026-09.jpg",
-      "uploadDate": "2026-09-27",
+      "description": "FÖY ile finansal özgürlüğe kaç gün kaldığını gör, varlıklarını saniyeler içinde ekle ve %4 kuralıyla hedefini hesapla. 45 saniyelik Türkçe tanıtım filmi.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-tanitim-tr-2026-10.jpg",
+      "uploadDate": "2026-10-04",
       "duration": "PT45S",
-      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-tr-45sn-2026-09.mp4",
+      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-tr-45sn-2026-10.mp4",
       "inLanguage": "tr",
       "publisher": { "@id": "https://appfoy.com/#publisher" }
     },
     {
       "@type": "VideoObject",
-      "@id": "https://appfoy.com/#film-en",
+      "@id": "https://appfoy.com/#film-tanitim-en",
       "name": "FÖY Promo Video (English, 45 sec)",
-      "description": "Track your portfolio, income and expenses in one place and see how many days are left to financial freedom. 45-second English promo video.",
-      "thumbnailUrl": "https://appfoy.com/assets/film/poster-en-2026-09.jpg",
-      "uploadDate": "2026-09-27",
+      "description": "See how many days are left to financial freedom, add your assets in seconds and calculate your target with the 4% rule. 45-second English promo video.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-tanitim-en-2026-10.jpg",
+      "uploadDate": "2026-10-04",
       "duration": "PT45S",
-      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-en-45sn-2026-09.mp4",
+      "contentUrl": "https://appfoy.com/assets/film/foy-tanitim-en-45sn-2026-10.mp4",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://appfoy.com/#film-nakit-tr",
+      "name": "FÖY Nakit Akışı Filmi (Türkçe, 45 sn)",
+      "description": "Aktif, pasif ve portföy gelirini tek ekranda takip et; giderlerinin ne kadarının karşılandığını gör. 45 saniyelik Türkçe nakit akışı filmi.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-nakit-tr-2026-10.jpg",
+      "uploadDate": "2026-10-04",
+      "duration": "PT45S",
+      "contentUrl": "https://appfoy.com/assets/film/foy-nakit-tr-45sn-2026-10.mp4",
+      "inLanguage": "tr",
+      "publisher": { "@id": "https://appfoy.com/#publisher" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://appfoy.com/#film-nakit-en",
+      "name": "FÖY Cash Flow Video (English, 45 sec)",
+      "description": "Track active, passive and portfolio income on one screen and see how much of your spending is covered. 45-second English cash flow video.",
+      "thumbnailUrl": "https://appfoy.com/assets/film/poster-nakit-en-2026-10.jpg",
+      "uploadDate": "2026-10-04",
+      "duration": "PT45S",
+      "contentUrl": "https://appfoy.com/assets/film/foy-nakit-en-45sn-2026-10.mp4",
       "inLanguage": "en",
       "publisher": { "@id": "https://appfoy.com/#publisher" }
     },
@@ -300,6 +324,9 @@
   .film video{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;display:block}
   .film h3{font-family:var(--display);font-size:19px;font-weight:500;margin:14px 4px 4px}
   .film p{color:var(--muted);font-size:14.5px;margin:0 4px 6px}
+  .film-grup{max-width:1040px;margin:0 auto 36px;scroll-margin-top:84px}
+  .film-grup:last-child{margin-bottom:0}
+  .film-dil{font-family:var(--display);font-size:22px;font-weight:500;margin:0 4px 14px}
   @media(max-width:760px){.films{grid-template-columns:1fr}}
 
   .endcta{text-align:center;padding:92px 0}
@@ -527,22 +554,46 @@
       <span class="eyebrow center">Tanıtım Filmleri</span>
       <h2>45 saniyede FÖY.</h2>
     </div>
-    <div class="films reveal">
-      <div class="film" id="film-tr">
-        <video controls playsinline preload="none" poster="assets/film/poster-tr-2026-09.jpg" aria-label="FÖY tanıtım filmi, Türkçe, 45 saniye">
-          <source src="assets/film/foy-tanitim-tr-45sn-2026-09.mp4" type="video/mp4" />
-          Tarayıcın videoyu oynatamıyor. <a href="assets/film/foy-tanitim-tr-45sn-2026-09.mp4">Filmi indir</a>.
-        </video>
-        <h3>Türkçe</h3>
-        <p>Sesli ve altyazılı · 45 sn</p>
+    <div class="film-grup reveal" id="film-tr">
+      <h3 class="film-dil">Türkçe</h3>
+      <div class="films">
+        <div class="film" id="film-tanitim-tr">
+          <video controls playsinline preload="none" poster="assets/film/poster-tanitim-tr-2026-10.jpg" aria-label="FÖY tanıtım filmi, Türkçe, 45 saniye">
+            <source src="assets/film/foy-tanitim-tr-45sn-2026-10.mp4" type="video/mp4" />
+            Tarayıcın videoyu oynatamıyor. <a href="assets/film/foy-tanitim-tr-45sn-2026-10.mp4">Filmi indir</a>.
+          </video>
+          <h3>FÖY Tanıtım</h3>
+          <p>Finansal özgürlüğe kaç gün kaldı? · 45 sn</p>
+        </div>
+        <div class="film" id="film-nakit-tr">
+          <video controls playsinline preload="none" poster="assets/film/poster-nakit-tr-2026-10.jpg" aria-label="FÖY nakit akışı filmi, Türkçe, 45 saniye">
+            <source src="assets/film/foy-nakit-tr-45sn-2026-10.mp4" type="video/mp4" />
+            Tarayıcın videoyu oynatamıyor. <a href="assets/film/foy-nakit-tr-45sn-2026-10.mp4">Filmi indir</a>.
+          </video>
+          <h3>Nakit Akışı</h3>
+          <p>Tüm gelirlerin tek ekranda · 45 sn</p>
+        </div>
       </div>
-      <div class="film" id="film-en">
-        <video controls playsinline preload="none" poster="assets/film/poster-en-2026-09.jpg" aria-label="FÖY promo video, English, 45 seconds" lang="en">
-          <source src="assets/film/foy-tanitim-en-45sn-2026-09.mp4" type="video/mp4" />
-          Your browser cannot play this video. <a href="assets/film/foy-tanitim-en-45sn-2026-09.mp4">Download the video</a>.
-        </video>
-        <h3>English</h3>
-        <p>Voiced and subtitled · 45 sec</p>
+    </div>
+    <div class="film-grup reveal" id="film-en">
+      <h3 class="film-dil" lang="en">English</h3>
+      <div class="films">
+        <div class="film" id="film-tanitim-en">
+          <video controls playsinline preload="none" poster="assets/film/poster-tanitim-en-2026-10.jpg" aria-label="FÖY promo video, English, 45 seconds" lang="en">
+            <source src="assets/film/foy-tanitim-en-45sn-2026-10.mp4" type="video/mp4" />
+            Your browser cannot play this video. <a href="assets/film/foy-tanitim-en-45sn-2026-10.mp4">Download the video</a>.
+          </video>
+          <h3>FÖY Promo</h3>
+          <p>How many days until you’re financially free? · 45 sec</p>
+        </div>
+        <div class="film" id="film-nakit-en">
+          <video controls playsinline preload="none" poster="assets/film/poster-nakit-en-2026-10.jpg" aria-label="FÖY cash flow video, English, 45 seconds" lang="en">
+            <source src="assets/film/foy-nakit-en-45sn-2026-10.mp4" type="video/mp4" />
+            Your browser cannot play this video. <a href="assets/film/foy-nakit-en-45sn-2026-10.mp4">Download the video</a>.
+          </video>
+          <h3>Cash Flow</h3>
+          <p>All your income on one screen · 45 sec</p>
+        </div>
       </div>
     </div>
   </div>
