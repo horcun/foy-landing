@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <title>FÖY Kule</title>
-<!-- Ana ekran kısayolu: kule claude.ai içinde açıldığı için ikonunu kendisi seçemez; bu sayfa FÖY ikonunu taşır
-     ve dokununca kuleye yönlendirir. "?ekle" ile açılınca yönlendirmez (ana ekrana eklenebilsin diye) ve
-     adresi temiz /kule/ yapar; kısayol o adresi saklar. Web uygulaması olarak açılır (Safari çubukları yok);
-     claude.ai'nin kendi üst şeridi kalır, o sayfa claude.ai'nindir. Kulenin kendisi gizlidir, yalnız sahibi açabilir. -->
+<!-- Ana ekran kısayolu. Kule claude.ai'de yaşar; iPhone onu Claude uygulamasında tam ekran ancak bir PARMAK
+     DOKUNUŞUYLA açar (kendiliğinden yönlendirme Safari'de, claude.ai çerçevesiyle açılıyordu — Orçun, 13 Eki).
+     Bu yüzden sayfa yönlendirmez: ekranın tamamı tek bir bağlantıdır, bir dokunuş kuleyi açar.
+     "?ekle" ile açılınca ana ekrana ekleme notu görünür. Kulenin kendisi gizlidir, yalnız sahibi açabilir. -->
 <link rel="apple-touch-icon" href="/kule/foy-kule-ikon-c.png" />
 <link rel="icon" href="/assets/favicon.png" />
 <link rel="manifest" href="/kule/manifest.webmanifest" />
@@ -18,36 +18,28 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#060A16" />
 <style>
-  html,body{margin:0;height:100%;background:#060A16;color:#E8EDFA;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-  main{min-height:100%;display:grid;place-items:center;padding:24px;box-sizing:border-box;text-align:center}
-  img{width:88px;height:88px;border-radius:22px;display:block;margin:0 auto 18px}
-  h1{font-size:20px;font-weight:600;margin:0 0 6px}
-  p{margin:0 0 18px;color:#8E9AC0;font-size:14px;line-height:1.5;max-width:34ch}
-  a{display:inline-block;padding:11px 22px;border-radius:12px;background:#3D8BFF;color:#fff;text-decoration:none;font-weight:600;font-size:14px}
-  .ekle{margin-top:18px;font-size:13px;color:#8E9AC0;max-width:36ch}
+  html,body{margin:0;height:100%;background:#120A22;color:#E8EDFA;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  a#ac{position:fixed;inset:0;display:grid;place-items:center;text-align:center;color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+  img{width:132px;height:132px;border-radius:30px;display:block;margin:0 auto 22px}
+  h1{font-size:21px;font-weight:600;margin:0 0 8px}
+  p{margin:0 auto;color:#B9A8D6;font-size:16px;line-height:1.5;max-width:30ch}
+  .ekle{margin-top:18px;font-size:13px;color:#8E9AC0}
 </style>
 </head>
 <body>
-<main>
+<a id="ac" href="https://claude.ai/artifact/9CKMNoWXqWqZT7bgAf4RNR">
   <div>
-    <img src="/kule/foy-kule-ikon-c.png" alt="FÖY" />
+    <img src="/kule/foy-kule-ikon-c.png" alt="FÖY Kule" />
     <h1>FÖY Kontrol Kulesi</h1>
-    <p id="durum">Kule açılıyor…</p>
-    <a id="ac" href="https://claude.ai/artifact/9CKMNoWXqWqZT7bgAf4RNR">Kuleyi aç</a>
-    <p class="ekle" id="ekle" hidden>Ana ekrana eklemek için: iPhone'da Paylaş → Ana Ekrana Ekle → “Web Uygulaması Olarak Aç” açık → Ekle · Android'de ⋮ → Ana ekrana ekle. Kısayol FÖY ikonuyla görünür, Safari çubukları olmadan açılır.</p>
+    <p>Kuleye girmek için ekrana dokun</p>
+    <p class="ekle" id="ekle" hidden>Ana ekrana eklemek için: Paylaş → Ana Ekrana Ekle → Ekle</p>
   </div>
-</main>
+</a>
 <script>
-(function(){
-  var hedef = document.getElementById("ac").href;
-  if (new URLSearchParams(location.search).has("ekle")) {
-    try { history.replaceState(null, "", location.pathname); } catch (e) {}
-    document.getElementById("durum").textContent = "Bu sayfayı ana ekrana ekle; sonra her dokunuşta kule açılır.";
-    document.getElementById("ekle").hidden = false;
-    return;
-  }
-  location.replace(hedef);
-})();
+if (new URLSearchParams(location.search).has("ekle")) {
+  try { history.replaceState(null, "", location.pathname); } catch (e) {}
+  document.getElementById("ekle").hidden = false;
+}
 </script>
 </body>
 </html>
