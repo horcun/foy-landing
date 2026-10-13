@@ -36,6 +36,11 @@
   </div>
 </a>
 <script>
+// Ana ekrandan "web uygulaması" olarak açıldıysa bağlantıyı sisteme devret: iPhone kuleyi Claude uygulamasında açar.
+// (Web uygulamasının kendi penceresinde açılırsa claude.ai çerçevesiyle açılıyordu.)
+if (window.navigator.standalone || matchMedia("(display-mode: standalone)").matches) {
+  var a = document.getElementById("ac"); a.target = "_blank"; a.rel = "noopener";
+}
 if (new URLSearchParams(location.search).has("ekle")) {
   try { history.replaceState(null, "", location.pathname); } catch (e) {}
   document.getElementById("ekle").hidden = false;
