@@ -2,8 +2,8 @@
   "name": "FÖY Kontrol Kulesi",
   "short_name": "FÖY Kule",
   "start_url": "/kule/",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#060A16",
   "theme_color": "#060A16",
-  "icons": [{ "src": "/kule/foy-kule-ikon-b.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }]
+  "icons": [{ "src": "/kule/foy-kule-ikon-c.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }]
 }

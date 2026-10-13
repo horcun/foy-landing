@@ -7,11 +7,15 @@
 <title>FÖY Kule</title>
 <!-- Ana ekran kısayolu: kule claude.ai içinde açıldığı için ikonunu kendisi seçemez; bu sayfa FÖY ikonunu taşır
      ve dokununca kuleye yönlendirir. "?ekle" ile açılınca yönlendirmez (ana ekrana eklenebilsin diye) ve
-     adresi temiz /kule/ yapar; kısayol o adresi saklar. Kulenin kendisi gizlidir, yalnız sahibi açabilir. -->
-<link rel="apple-touch-icon" href="/kule/foy-kule-ikon-b.png" />
+     adresi temiz /kule/ yapar; kısayol o adresi saklar. Web uygulaması olarak açılır (Safari çubukları yok);
+     claude.ai'nin kendi üst şeridi kalır, o sayfa claude.ai'nindir. Kulenin kendisi gizlidir, yalnız sahibi açabilir. -->
+<link rel="apple-touch-icon" href="/kule/foy-kule-ikon-c.png" />
 <link rel="icon" href="/assets/favicon.png" />
 <link rel="manifest" href="/kule/manifest.webmanifest" />
 <meta name="apple-mobile-web-app-title" content="FÖY Kule" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#060A16" />
 <style>
   html,body{margin:0;height:100%;background:#060A16;color:#E8EDFA;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -26,11 +30,11 @@
 <body>
 <main>
   <div>
-    <img src="/kule/foy-kule-ikon-b.png" alt="FÖY" />
+    <img src="/kule/foy-kule-ikon-c.png" alt="FÖY" />
     <h1>FÖY Kontrol Kulesi</h1>
     <p id="durum">Kule açılıyor…</p>
     <a id="ac" href="https://claude.ai/artifact/9CKMNoWXqWqZT7bgAf4RNR">Kuleyi aç</a>
-    <p class="ekle" id="ekle" hidden>Ana ekrana eklemek için: iPhone'da Paylaş → Ana Ekrana Ekle · Android'de ⋮ → Ana ekrana ekle. Kısayol FÖY ikonuyla görünür ve dokununca kuleyi açar.</p>
+    <p class="ekle" id="ekle" hidden>Ana ekrana eklemek için: iPhone'da Paylaş → Ana Ekrana Ekle → “Web Uygulaması Olarak Aç” açık → Ekle · Android'de ⋮ → Ana ekrana ekle. Kısayol FÖY ikonuyla görünür, Safari çubukları olmadan açılır.</p>
   </div>
 </main>
 <script>
