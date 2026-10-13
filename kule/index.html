@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>FÖY Kule</title>
+<!-- Ana ekran kısayolu: kule claude.ai içinde açıldığı için ikonunu kendisi seçemez; bu sayfa FÖY ikonunu taşır
+     ve dokununca kuleye yönlendirir. "?ekle" ile açılınca yönlendirmez (ana ekrana eklenebilsin diye) ve
+     adresi temiz /kule/ yapar; kısayol o adresi saklar. Kulenin kendisi gizlidir, yalnız sahibi açabilir. -->
+<link rel="apple-touch-icon" href="/kule/apple-touch-icon.png" />
+<link rel="icon" href="/assets/favicon.png" />
+<link rel="manifest" href="/kule/manifest.webmanifest" />
+<meta name="apple-mobile-web-app-title" content="FÖY Kule" />
+<meta name="theme-color" content="#060A16" />
+<style>
+  html,body{margin:0;height:100%;background:#060A16;color:#E8EDFA;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  main{min-height:100%;display:grid;place-items:center;padding:24px;box-sizing:border-box;text-align:center}
+  img{width:88px;height:88px;border-radius:22px;display:block;margin:0 auto 18px}
+  h1{font-size:20px;font-weight:600;margin:0 0 6px}
+  p{margin:0 0 18px;color:#8E9AC0;font-size:14px;line-height:1.5;max-width:34ch}
+  a{display:inline-block;padding:11px 22px;border-radius:12px;background:#3D8BFF;color:#fff;text-decoration:none;font-weight:600;font-size:14px}
+  .ekle{margin-top:18px;font-size:13px;color:#8E9AC0;max-width:36ch}
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <img src="/kule/apple-touch-icon.png" alt="FÖY" />
+    <h1>FÖY Kontrol Kulesi</h1>
+    <p id="durum">Kule açılıyor…</p>
+    <a id="ac" href="https://claude.ai/artifact/9CKMNoWXqWqZT7bgAf4RNR">Kuleyi aç</a>
+    <p class="ekle" id="ekle" hidden>Ana ekrana eklemek için: iPhone'da Paylaş → Ana Ekrana Ekle · Android'de ⋮ → Ana ekrana ekle. Kısayol FÖY ikonuyla görünür ve dokununca kuleyi açar.</p>
+  </div>
+</main>
+<script>
+(function(){
+  var hedef = document.getElementById("ac").href;
+  if (new URLSearchParams(location.search).has("ekle")) {
+    try { history.replaceState(null, "", location.pathname); } catch (e) {}
+    document.getElementById("durum").textContent = "Bu sayfayı ana ekrana ekle; sonra her dokunuşta kule açılır.";
+    document.getElementById("ekle").hidden = false;
+    return;
+  }
+  location.replace(hedef);
+})();
+</script>
+</body>
+</html>
