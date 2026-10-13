@@ -5,5 +5,5 @@
   "display": "browser",
   "background_color": "#060A16",
   "theme_color": "#060A16",
-  "icons": [{ "src": "/kule/apple-touch-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }]
+  "icons": [{ "src": "/kule/foy-kule-ikon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }]
 }
