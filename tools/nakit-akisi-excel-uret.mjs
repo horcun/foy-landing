@@ -215,7 +215,7 @@ const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 // ── VERİ ──────────────────────────────────────────────────────────────────
 // Örnek aylar — kullanıcı dosyayı açar açmaz çalıştığını görsün diye.
-// Kullanım sayfasında "silebilirsiniz" diye yazıyor (portföy şablonuyla aynı).
+// Kullanım sayfasında "içeriğini temizleyebilirsiniz" diye yazıyor.
 // Bilinçli seçimler:
 //   • Şubat'ta portföy geliri EKSİ → eksi değerin işaretiyle göründüğü ve
 //     toplamı doğru düşürdüğü dosyayla birlikte teslim edilsin.
@@ -413,7 +413,7 @@ function kullanimSayfasi() {
   yaz(14, 'Eksi sayılar başında eksi işaretiyle ve kırmızı görünür (örn. -9.600,00 ₺).');
 
   yaz(16, 'ÖRNEK SATIRLAR', STIL.BOLUM);
-  yaz(17, 'Dosyada 3 örnek ay var; şablonun çalıştığını görmeniz için kondu. Kendi aylarınızı girmeden önce bu satırları silebilirsiniz.', STIL.ADIM, '30');
+  yaz(17, 'Dosyada 3 örnek ay var; şablonun çalıştığını görmeniz için kondu. Kendi aylarınızı girmeden önce bu satırların içeriğini temizleyebilirsiniz (satırı silmeyin, 24 aylık alan daralır).', STIL.ADIM, '30');
 
   yaz(19, 'PASİF PAYI VE KARŞILAMA', STIL.BOLUM);
   yaz(20, 'Pasif payı: o ayki toplam gelirin ne kadarının pasif gelirden geldiği.');
@@ -422,7 +422,7 @@ function kullanimSayfasi() {
   yaz(23, 'SINIRLAR', STIL.BOLUM);
   yaz(24, '•  24 aylık çalışma alanı vardır. Daha fazlası için satır ekleyip formülleri aşağı sürükleyin.');
   yaz(25, '•  Makro yoktur, dış veri bağlantısı yoktur. Dosya internete bağlanmaz; her sayıyı siz girersiniz.');
-  yaz(26, '•  Google E-Tablolar\'da da açılır ve aynı şekilde hesaplar.');
+  yaz(26, '•  Google E-Tablolar ile de açılır; yalnız temel işlevler kullanılır.');
   yaz(27, '•  İşlem defteri tutmaz: tek tek alım-satım ya da temettü kaydı için ayrı bir kayıt gerekir.');
 
   yaz(29, 'DAHA PRATİK BİR YOL', STIL.BOLUM);

@@ -567,7 +567,7 @@ ok('Kullanım: makro yok diyor', /Makro yoktur/.test(k3));
 ok('Kullanım: dış veri bağlantısı yok diyor', /dış veri bağlantısı yoktur/.test(k3));
 ok('Kullanım: Google E-Tablolar\'da açılır diyor', /Google E-Tablolar/.test(k3));
 ok('Kullanım: işlem defteri tutmaz diyor', /İşlem defteri tutmaz/.test(k3));
-ok('Kullanım: örnek satırların silinebileceğini söylüyor', /silebilirsiniz/.test(k3));
+ok('Kullanım: örnek satırların silinebileceğini söylüyor', /temizleyebilirsiniz/.test(k3));
 ok('Kullanım: eksi sayının işaretle gösterildiğini söylüyor', /eksi işaretiyle/.test(k3));
 ok('şablonda makro/VBA parçası YOK', !Object.keys(zip).some(k => /vbaProject|\.bin$/i.test(k)));
 ok('şablonda dış veri bağlantısı YOK',
